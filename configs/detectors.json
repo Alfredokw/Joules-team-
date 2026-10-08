@@ -1,0 +1,17 @@
+{
+  "asan": {
+    "compile_flags": ["-fsanitize=address", "-fsanitize-recover=address"],
+    "environment": {"ASAN_OPTIONS": "halt_on_error=0:detect_leaks=1"}
+  },
+  "msan": {
+    "compile_flags": ["-fsanitize=memory", "-fsanitize-memory-track-origins=2", "-fsanitize-recover=memory", "-fPIE", "-pie"],
+    "environment": {"MSAN_OPTIONS": "halt_on_error=0:exit_code=0"}
+  },
+  "tsan": {
+    "compile_flags": ["-fsanitize=thread"],
+    "environment": {"TSAN_OPTIONS": "halt_on_error=0:exitcode=0"}
+  },
+  "memcheck": {
+    "command_prefix": ["valgrind", "--tool=memcheck", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes", "--error-exitcode=0"]
+  }
+}
