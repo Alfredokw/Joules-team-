@@ -8,7 +8,7 @@
  */
 NOINLINE static void inject(const bench_config *cfg, uint64_t *queries, size_t count)
 {
-    hash_entry *leaked = xmalloc(sizeof(*leaked));
+    volatile hash_entry *leaked = xmalloc(sizeof(*leaked));
     leaked->key = queries[count / 2];
     leaked->value = mix64(cfg->seed);
     observable_sink ^= leaked->value;
