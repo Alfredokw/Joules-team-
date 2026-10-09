@@ -140,7 +140,7 @@ def main():
     memory = memory_bytes()
     report["memory_bytes"] = memory
     hardware_issues = []
-    if "Xeon Silver 4208" not in cpu["model"]:
+    if "Xeon Silver 4208" not in cpu["model"].replace("(R)", ""):
         hardware_issues.append(f"unexpected CPU model: {cpu['model']}")
     if cpu["physical_packages"] != 2:
         hardware_issues.append(f"expected 2 physical CPU packages, found {cpu['physical_packages']}")

@@ -42,7 +42,7 @@
   "configurations": ["baseline", "asan", "msan", "tsan", "memcheck"],
   "energibridge_command": ["energibridge"],
   "energibridge_interval_ms": 10,
-  "turbostat_command": ["turbostat"],
+  "turbostat_command": ["sudo", "-n", "turbostat"],
   "turbostat_interval_seconds": 0.01,
   "execution_timeout_seconds": 900,
   "require_workload_completion": true,
