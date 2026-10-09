@@ -8,8 +8,8 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TARGET = ROOT.parent / "sanitizer-energy-benchmark-linux-final.zip"
-EXCLUDED_PARTS = {"bin", "build", "__pycache__", "runs", "preflight-artifacts"}
+TARGET = ROOT.parent / "Joules-team-linux-workload-precheck-full.zip"
+EXCLUDED_PARTS = {"bin", "build", ".build", "__pycache__", "runs", "preflight-artifacts"}
 ALLOWED_RESULTS = {
     "results/README.md",
     "results/schedule.csv",
@@ -25,6 +25,8 @@ def included(path):
     if any(part in EXCLUDED_PARTS for part in relative.parts):
         return False
     if name.startswith("results/") and name not in ALLOWED_RESULTS:
+        return False
+    if name.startswith("calibration/results/"):
         return False
     return name != "CHECKSUMS.sha256"
 

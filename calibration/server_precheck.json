@@ -1,0 +1,15 @@
+{
+  "repetitions": 5,
+  "warmups_per_condition": 1,
+  "timeout_seconds": 900,
+  "schedule_seed": 20261009,
+  "reference_configuration": "asan",
+  "minimum_reference_ratio": 2.0,
+  "configurations": ["baseline", "asan", "msan", "tsan", "memcheck"],
+  "representatives": {
+    "bst": "bst_oob",
+    "hash_table": "hash_oob",
+    "parallel_matrix": "matrix_oob",
+    "juliet": "juliet_oob_heap_loop"
+  }
+}

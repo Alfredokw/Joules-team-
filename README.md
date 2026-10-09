@@ -56,6 +56,7 @@ make static-check
 make preflight
 python3 scripts/validate.py --repeats 3
 make validate-detectors
+make workload-precheck
 make schedule
 make smoke
 make run
@@ -81,6 +82,10 @@ overhead factors under `results/processed/`.
 3. Preserve invalid runs and their logs; never replace them silently.
 4. Do not mix measurements from different hosts or compiler/tool versions.
 5. Archive the complete package and `results/` directory after the campaign.
+
+The Linux-only workload compatibility precheck writes under
+`calibration/results/` and is not part of the 7,200 measured executions. Start
+the measured campaign only when its summary reports `"passed": true`.
 
 See `docs/EXPERIMENT_PROTOCOL.md`, `docs/RUN.md`,
 `docs/DATA_DICTIONARY.md`, and `docs/VALIDATION.md` for details.
