@@ -94,41 +94,56 @@ def read_energibridge(path: Path):
     }
     if not path.exists() or path.stat().st_size == 0:
         return result
-    with path.open(newline="", encoding="utf-8", errors="replace") as handle:
-        rows = list(csv.DictReader(handle))
-    if not rows:
-        return result
-    headers = list(rows[0])
-    power_headers = [
-        header
-        for header in headers
-        if "POWER" in header.upper() and "WATT" in header.upper()
-    ]
-    if not power_headers:
-        return result
-    preferred = [header for header in power_headers if "SYSTEM" in header.upper()]
-    power_header = preferred[0] if preferred else power_headers[0]
-    powers = [optional_float(row.get(power_header)) for row in rows]
-    powers = [value for value in powers if value is not None]
-    result["samples"] = powers
-    if powers:
-        result["average_power_watts"] = statistics.fmean(powers)
 
-    delta_header = next((header for header in headers if header.lower() == "delta"), None)
-    if delta_header:
-        points = []
-        for row in rows:
-            delta = optional_float(row.get(delta_header))
-            power = optional_float(row.get(power_header))
-            if delta is not None and power is not None:
-                points.append((delta / 1000.0, power))
-        if len(points) >= 2:
-            energy = 0.0
-            for (t0, p0), (t1, p1) in zip(points, points[1:]):
-                if t1 >= t0:
-                    energy += (t1 - t0) * (p0 + p1) / 2.0
-            result["energy_joules"] = energy
-            result["duration_seconds"] = points[-1][0] - points[0][0]
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+
+    points = []
+    previous = None
+
+    for row in rows:
+        values = [
+            optional_float(row.get(key))
+            for key in (
+                "Time",
+                "PACKAGE_ENERGY (J)",
+                "DRAM_ENERGY (J)",
+            )
+        ]
+        if any(value is None for value in values):
+            return result
+
+        t, package, dram = values
+
+        if previous is not None:
+            if any(value < old for value, old in zip(values, previous)):
+                # Reject counter resets/wraps or reversed timestamps.
+                return result
+        previous = values
+
+        if points and t == points[-1][0]:
+            # Keep the first reading at a duplicated timestamp.
+            continue
+
+        points.append((t, package + dram))
+
+    if len(points) < 2:
+        return result
+
+    duration = (points[-1][0] - points[0][0]) / 1000.0
+    energy = points[-1][1] - points[0][1]
+
+    powers = [
+        (e1 - e0) / ((t1 - t0) / 1000.0)
+        for (t0, e0), (t1, e1) in zip(points, points[1:])
+    ]
+
+    result.update(
+        energy_joules=energy,
+        average_power_watts=energy / duration,
+        duration_seconds=duration,
+        samples=powers,
+    )
     return result
 
 
