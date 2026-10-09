@@ -13,7 +13,8 @@ NOINLINE static void inject(const bench_config *cfg, double *matrix, size_t cell
     (void)cfg;
     partial_sum *partial = xmalloc(sizeof(*partial));
     partial->sum = matrix[cells / 2];
-    observable_sink ^= (uint64_t)(partial->correction);
+    printf("ERROR_TRIGGER value=%f\n",
+       ((volatile partial_sum *)partial)->correction);
     free(partial);
 }
 

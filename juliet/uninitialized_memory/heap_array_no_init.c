@@ -9,7 +9,7 @@ NOINLINE static void trigger(const bench_config *cfg)
 {
     size_t count = cfg->n < 100 ? 100 : cfg->n / 100;
     int *data = xmalloc(count * sizeof(*data));
-    observable_sink ^= (uint64_t)data[count / 2];
+    printf("ERROR_TRIGGER value=%d\n", ((volatile int *)data)[count / 2]);
     free(data);
 }
 

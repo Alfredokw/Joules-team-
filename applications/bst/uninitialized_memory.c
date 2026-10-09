@@ -13,7 +13,8 @@ NOINLINE static void inject(const bench_config *cfg, uint64_t *queries, size_t c
     (void)cfg;
     search_result *result = xmalloc(sizeof(*result));
     result->key = queries[count / 2];
-    observable_sink ^= result->found;
+    printf("ERROR_TRIGGER value=%" PRIu64 "\n",
+       ((volatile search_result *)result)->found);
     free(result);
 }
 

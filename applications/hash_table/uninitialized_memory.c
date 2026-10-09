@@ -11,7 +11,8 @@ NOINLINE static void inject(const bench_config *cfg, uint64_t *queries, size_t c
     (void)cfg;
     hash_entry *entry = xmalloc(sizeof(*entry));
     entry->key = queries[count / 2];
-    observable_sink ^= entry->value;
+    printf("ERROR_TRIGGER value=%" PRIu64 "\n",
+       ((volatile hash_entry *)entry)->value);
     free(entry);
 }
 

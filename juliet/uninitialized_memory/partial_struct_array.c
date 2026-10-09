@@ -12,7 +12,8 @@ NOINLINE static void trigger(const bench_config *cfg)
     size_t count = cfg->n < 100 ? 100 : cfg->n / 100;
     juliet_record *data = xmalloc(count * sizeof(*data));
     for (size_t i = 0; i < count; ++i) data[i].initialized = i;
-    observable_sink ^= data[count / 2].uninitialized;
+    printf("ERROR_TRIGGER value=%" PRIu64 "\n",
+       ((volatile juliet_record *)data)[count / 2].uninitialized);
     free(data);
 }
 
