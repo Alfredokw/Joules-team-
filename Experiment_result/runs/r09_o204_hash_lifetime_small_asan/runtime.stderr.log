@@ -1,0 +1,15 @@
+
+=================================================================
+==3342166==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 72 byte(s) in 1 object(s) allocated from:
+    #0 0x5fd56835e1b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r09_o204_hash_lifetime_small_asan/program+0xc71b3) (BuildId: 2bbe4be655e1fcbe892d79959694327ff9f1ccad)
+    #1 0x5fd56839ef0d in xmalloc /home/gl_joulesteam/Joules-team-/applications/hash_table/../../common/bench.h:35:15
+    #2 0x5fd56839ef0d in inject /home/gl_joulesteam/Joules-team-/applications/hash_table/lifetime_deallocation.c:11:35
+    #3 0x5fd56839e520 in run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5
+    #4 0x5fd56839e520 in main /home/gl_joulesteam/Joules-team-/applications/hash_table/lifetime_deallocation.c:18:42
+    #5 0x7aa64842a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7aa64842a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x5fd5682c3364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r09_o204_hash_lifetime_small_asan/program+0x2c364) (BuildId: 2bbe4be655e1fcbe892d79959694327ff9f1ccad)
+
+SUMMARY: AddressSanitizer: 72 byte(s) leaked in 1 allocation(s).

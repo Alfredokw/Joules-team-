@@ -1,0 +1,20 @@
+==3278196==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x5f642f682ab4 in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:12:5
+    #1 0x5f642f68216c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5
+    #2 0x5f642f68216c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:16:42
+    #3 0x7f5a3782a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7f5a3782a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x5f642f5e9304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r01_o220_juliet_uninit_heap_array_small_msan/program+0x32304) (BuildId: 77f516b174070073936061dc156b98e301121d53)
+
+  Uninitialized value was created by a heap allocation
+    #0 0x5f642f624f76 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r01_o220_juliet_uninit_heap_array_small_msan/program+0x6df76) (BuildId: 77f516b174070073936061dc156b98e301121d53)
+    #1 0x5f642f682a0d in xmalloc /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../../common/bench.h:35:15
+    #2 0x5f642f682a0d in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:11:17
+    #3 0x5f642f68216c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5
+    #4 0x5f642f68216c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:16:42
+    #5 0x7f5a3782a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7f5a3782a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x5f642f5e9304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r01_o220_juliet_uninit_heap_array_small_msan/program+0x32304) (BuildId: 77f516b174070073936061dc156b98e301121d53)
+
+SUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:12:5 in trigger
+MemorySanitizer: 1 warnings reported.

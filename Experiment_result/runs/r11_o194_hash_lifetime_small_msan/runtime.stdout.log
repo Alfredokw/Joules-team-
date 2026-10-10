@@ -1,0 +1,1 @@
+WORKLOAD_COMPLETE program=hash_table variant=lifetime_deallocation size=small n=50000 threads=4 seed=20261002 checksum=4833237021663361276

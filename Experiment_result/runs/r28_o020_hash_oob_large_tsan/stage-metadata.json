@@ -1,0 +1,38 @@
+{
+  "run_id": "r28_o020_hash_oob_large_tsan",
+  "measurement_scope": "build_and_run",
+  "subject_id": "hash_oob",
+  "workload": "large",
+  "input_n": 300000,
+  "configuration": "tsan",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "-fsanitize=thread",
+    "/home/gl_joulesteam/Joules-team-/applications/hash_table/out_of_bounds.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r28_o020_hash_oob_large_tsan/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r28_o020_hash_oob_large_tsan/program",
+    "--size",
+    "large",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.3888578647747636,
+  "runtime_seconds": 1.008732307702303,
+  "stage_status": "completed"
+}

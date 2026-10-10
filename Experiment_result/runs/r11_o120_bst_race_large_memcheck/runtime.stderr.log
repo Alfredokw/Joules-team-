@@ -1,0 +1,14 @@
+==3355527== Memcheck, a memory error detector
+==3355527== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3355527== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3355527== Command: /home/gl_joulesteam/Joules-team-/results/runs/r11_o120_bst_race_large_memcheck/program --size large --threads 4 --seed 20261002
+==3355527== 
+==3355527== 
+==3355527== HEAP SUMMARY:
+==3355527==     in use at exit: 0 bytes in 0 blocks
+==3355527==   total heap usage: 240,008 allocs, 240,008 frees, 9,605,376 bytes allocated
+==3355527== 
+==3355527== All heap blocks were freed -- no leaks are possible
+==3355527== 
+==3355527== For lists of detected and suppressed errors, rerun with: -s
+==3355527== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

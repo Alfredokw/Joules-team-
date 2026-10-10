@@ -1,0 +1,52 @@
+=================================================================
+==3404659==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7155c61fd300 at pc 0x58de26f6fde4 bp 0x7ffe3dc02950 sp 0x7ffe3dc02948
+READ of size 8 at 0x7155c61fd300 thread T0
+    #0 0x58de26f6fde3 in inject /home/gl_joulesteam/Joules-team-/applications/hash_table/out_of_bounds.c:13:5
+    #1 0x58de26f6f4c9 in run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5
+    #2 0x58de26f6f4c9 in main /home/gl_joulesteam/Joules-team-/applications/hash_table/out_of_bounds.c:17:42
+    #3 0x7155c982a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7155c982a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x58de26e94364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r17_o144_hash_oob_large_asan/program+0x2c364) (BuildId: fa6009ab623823cea2e7a0e2c39c8b6d07a6f29d)
+
+0x7155c61fd300 is located 0 bytes after 12000000-byte region [0x7155c568b800,0x7155c61fd300)
+allocated by thread T0 here:
+    #0 0x58de26f2f1b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r17_o144_hash_oob_large_asan/program+0xc71b3) (BuildId: fa6009ab623823cea2e7a0e2c39c8b6d07a6f29d)
+    #1 0x58de26f6f10d in xmalloc /home/gl_joulesteam/Joules-team-/applications/hash_table/../../common/bench.h:35:15
+    #2 0x58de26f6f10d in run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:45:25
+    #3 0x58de26f6f10d in main /home/gl_joulesteam/Joules-team-/applications/hash_table/out_of_bounds.c:17:42
+    #4 0x7155c982a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #5 0x7155c982a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #6 0x58de26e94364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r17_o144_hash_oob_large_asan/program+0x2c364) (BuildId: fa6009ab623823cea2e7a0e2c39c8b6d07a6f29d)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/gl_joulesteam/Joules-team-/applications/hash_table/out_of_bounds.c:13:5 in inject
+Shadow bytes around the buggy address:
+  0x7155c61fd080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7155c61fd100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7155c61fd180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7155c61fd200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7155c61fd280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x7155c61fd300:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7155c61fd380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7155c61fd400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7155c61fd480: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7155c61fd500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7155c61fd580: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

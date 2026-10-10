@@ -1,0 +1,25 @@
+==================
+WARNING: ThreadSanitizer: data race (pid=3476859)
+  Write of size 8 at 0x5555569df6a0 by thread T1:
+    #0 worker /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c (program+0xdf423) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+
+  Previous read of size 8 at 0x5555569df6a0 by thread T2:
+    #0 worker /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c (program+0xdf3f1) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+
+  Location is global 'control_counter' of size 8 at 0x5555569df6a0 (program+0x148b6a0)
+
+  Thread T1 (tid=3476861, running) created by main thread at:
+    #0 pthread_create <null> (program+0x605ff) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:25:5 (program+0xdf340) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (program+0xdf137) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:32:42 (program+0xdf137)
+
+  Thread T2 (tid=3476862, running) created by main thread at:
+    #0 pthread_create <null> (program+0x605ff) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:26:5 (program+0xdf354) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (program+0xdf137) (BuildId: 3f27340df95769260346160052f7360936d78a4e)
+    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:32:42 (program+0xdf137)
+
+SUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c in worker
+==================
+ThreadSanitizer: reported 1 warnings

@@ -1,0 +1,72 @@
+==3343906== Memcheck, a memory error detector
+==3343906== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3343906== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3343906== Command: /home/gl_joulesteam/Joules-team-/results/runs/r10_o016_juliet_uninit_partial_int_small_memcheck/program --size small --threads 4 --seed 20261002
+==3343906== 
+==3343906== Conditional jump or move depends on uninitialised value(s)
+==3343906==    at 0x48CD0CB: __printf_buffer (vfprintf-process-arg.c:58)
+==3343906==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3343906==    by 0x48C31B2: printf (printf.c:33)
+==3343906==    by 0x1097AE: trigger (partial_int_array.c:13)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906==  Uninitialised value was created by a heap allocation
+==3343906==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3343906==    by 0x10976A: xmalloc (bench.h:35)
+==3343906==    by 0x10976A: trigger (partial_int_array.c:11)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906== 
+==3343906== Use of uninitialised value of size 8
+==3343906==    at 0x48C20BB: _itoa_word (_itoa.c:183)
+==3343906==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3343906==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3343906==    by 0x48C31B2: printf (printf.c:33)
+==3343906==    by 0x1097AE: trigger (partial_int_array.c:13)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906==  Uninitialised value was created by a heap allocation
+==3343906==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3343906==    by 0x10976A: xmalloc (bench.h:35)
+==3343906==    by 0x10976A: trigger (partial_int_array.c:11)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906== 
+==3343906== Conditional jump or move depends on uninitialised value(s)
+==3343906==    at 0x48C20CC: _itoa_word (_itoa.c:183)
+==3343906==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3343906==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3343906==    by 0x48C31B2: printf (printf.c:33)
+==3343906==    by 0x1097AE: trigger (partial_int_array.c:13)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906==  Uninitialised value was created by a heap allocation
+==3343906==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3343906==    by 0x10976A: xmalloc (bench.h:35)
+==3343906==    by 0x10976A: trigger (partial_int_array.c:11)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906== 
+==3343906== Conditional jump or move depends on uninitialised value(s)
+==3343906==    at 0x48CCD85: __printf_buffer (vfprintf-process-arg.c:186)
+==3343906==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3343906==    by 0x48C31B2: printf (printf.c:33)
+==3343906==    by 0x1097AE: trigger (partial_int_array.c:13)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906==  Uninitialised value was created by a heap allocation
+==3343906==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3343906==    by 0x10976A: xmalloc (bench.h:35)
+==3343906==    by 0x10976A: trigger (partial_int_array.c:11)
+==3343906==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3343906==    by 0x1095E9: main (partial_int_array.c:17)
+==3343906== 
+==3343906== 
+==3343906== HEAP SUMMARY:
+==3343906==     in use at exit: 0 bytes in 0 blocks
+==3343906==   total heap usage: 3 allocs, 3 frees, 8,044,096 bytes allocated
+==3343906== 
+==3343906== All heap blocks were freed -- no leaks are possible
+==3343906== 
+==3343906== For lists of detected and suppressed errors, rerun with: -s
+==3343906== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

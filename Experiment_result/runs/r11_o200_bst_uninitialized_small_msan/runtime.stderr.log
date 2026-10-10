@@ -1,0 +1,20 @@
+==3358196==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x55555561f995 in inject /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:16:5
+    #1 0x55555561e9b4 in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5
+    #2 0x55555561e9b4 in main /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:21:42
+    #3 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r11_o200_bst_uninitialized_small_msan/program+0x32304) (BuildId: 1bef03f58977a1f11a850a0408035c4810cf4c5a)
+
+  Uninitialized value was created by a heap allocation
+    #0 0x5555555c1f76 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r11_o200_bst_uninitialized_small_msan/program+0x6df76) (BuildId: 1bef03f58977a1f11a850a0408035c4810cf4c5a)
+    #1 0x55555561f8bd in xmalloc /home/gl_joulesteam/Joules-team-/applications/bst/../../common/bench.h:35:15
+    #2 0x55555561f8bd in inject /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:14:29
+    #3 0x55555561e9b4 in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5
+    #4 0x55555561e9b4 in main /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:21:42
+    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r11_o200_bst_uninitialized_small_msan/program+0x32304) (BuildId: 1bef03f58977a1f11a850a0408035c4810cf4c5a)
+
+SUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:16:5 in inject
+MemorySanitizer: 1 warnings reported.

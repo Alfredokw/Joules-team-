@@ -1,0 +1,20 @@
+==3365151==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x55555561fb8c in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:13:5
+    #1 0x55555561f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5
+    #2 0x55555561f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:17:42
+    #3 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r12_o167_juliet_uninit_partial_int_large_msan/program+0x32304) (BuildId: fe77f785fbcdd8d15886dfa9d836c1df426e0ff8)
+
+  Uninitialized value was created by a heap allocation
+    #0 0x5555555c1f76 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r12_o167_juliet_uninit_partial_int_large_msan/program+0x6df76) (BuildId: fe77f785fbcdd8d15886dfa9d836c1df426e0ff8)
+    #1 0x55555561fa18 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../../common/bench.h:35:15
+    #2 0x55555561fa18 in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:11:17
+    #3 0x55555561f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5
+    #4 0x55555561f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:17:42
+    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r12_o167_juliet_uninit_partial_int_large_msan/program+0x32304) (BuildId: fe77f785fbcdd8d15886dfa9d836c1df426e0ff8)
+
+SUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:13:5 in trigger
+MemorySanitizer: 1 warnings reported.

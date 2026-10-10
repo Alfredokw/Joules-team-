@@ -1,0 +1,58 @@
+==3470354== Memcheck, a memory error detector
+==3470354== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3470354== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3470354== Command: /home/gl_joulesteam/Joules-team-/results/runs/r25_o182_bst_uninitialized_large_memcheck/program --size large --threads 4 --seed 20261002
+==3470354== 
+==3470354== Use of uninitialised value of size 8
+==3470354==    at 0x48C20BB: _itoa_word (_itoa.c:183)
+==3470354==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3470354==    by 0x48CE5A1: __vfprintf_internal (vfprintf-internal.c:1559)
+==3470354==    by 0x48C31B2: printf (printf.c:33)
+==3470354==    by 0x1098BE: inject (uninitialized_memory.c:16)
+==3470354==    by 0x10976A: run_bst (bst_core.h:63)
+==3470354==    by 0x10976A: main (uninitialized_memory.c:21)
+==3470354==  Uninitialised value was created by a heap allocation
+==3470354==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3470354==    by 0x109899: xmalloc (bench.h:35)
+==3470354==    by 0x109899: inject (uninitialized_memory.c:14)
+==3470354==    by 0x10976A: run_bst (bst_core.h:63)
+==3470354==    by 0x10976A: main (uninitialized_memory.c:21)
+==3470354== 
+==3470354== Conditional jump or move depends on uninitialised value(s)
+==3470354==    at 0x48C20CC: _itoa_word (_itoa.c:183)
+==3470354==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3470354==    by 0x48CE5A1: __vfprintf_internal (vfprintf-internal.c:1559)
+==3470354==    by 0x48C31B2: printf (printf.c:33)
+==3470354==    by 0x1098BE: inject (uninitialized_memory.c:16)
+==3470354==    by 0x10976A: run_bst (bst_core.h:63)
+==3470354==    by 0x10976A: main (uninitialized_memory.c:21)
+==3470354==  Uninitialised value was created by a heap allocation
+==3470354==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3470354==    by 0x109899: xmalloc (bench.h:35)
+==3470354==    by 0x109899: inject (uninitialized_memory.c:14)
+==3470354==    by 0x10976A: run_bst (bst_core.h:63)
+==3470354==    by 0x10976A: main (uninitialized_memory.c:21)
+==3470354== 
+==3470354== Conditional jump or move depends on uninitialised value(s)
+==3470354==    at 0x48CCD85: __printf_buffer (vfprintf-process-arg.c:186)
+==3470354==    by 0x48CE5A1: __vfprintf_internal (vfprintf-internal.c:1559)
+==3470354==    by 0x48C31B2: printf (printf.c:33)
+==3470354==    by 0x1098BE: inject (uninitialized_memory.c:16)
+==3470354==    by 0x10976A: run_bst (bst_core.h:63)
+==3470354==    by 0x10976A: main (uninitialized_memory.c:21)
+==3470354==  Uninitialised value was created by a heap allocation
+==3470354==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3470354==    by 0x109899: xmalloc (bench.h:35)
+==3470354==    by 0x109899: inject (uninitialized_memory.c:14)
+==3470354==    by 0x10976A: run_bst (bst_core.h:63)
+==3470354==    by 0x10976A: main (uninitialized_memory.c:21)
+==3470354== 
+==3470354== 
+==3470354== HEAP SUMMARY:
+==3470354==     in use at exit: 0 bytes in 0 blocks
+==3470354==   total heap usage: 240,009 allocs, 240,009 frees, 9,605,392 bytes allocated
+==3470354== 
+==3470354== All heap blocks were freed -- no leaks are possible
+==3470354== 
+==3470354== For lists of detected and suppressed errors, rerun with: -s
+==3470354== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

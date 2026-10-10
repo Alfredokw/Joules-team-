@@ -1,0 +1,221 @@
+{
+  "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+  "results": [
+    {
+      "detector": "asan",
+      "subject_id": "juliet_oob_heap_loop",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " fa 00[02]fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "juliet_oob_heap_memcpy",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " fa 00[02]fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x502000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "juliet_oob_stack_loop",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " f1 f1 f1 00[02]f3 f3 00 00 00 00 00 00 00 00\n  0x7bb353900080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x7bb353900100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x7bb353900180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x7bb353900200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x7bb353900280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "juliet_lifetime_uaf",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " fa fa fa fa fa fa fa[fd]fd fd fd fd fd fd fd\n  0x50b000000080: fd fd fd fd fd fa fa fa fa fa fa fa fa fa fa fa\n  0x50b000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50b000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50b000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50b000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "bst_oob",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x7e8c4d6bf300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x7e8c4d6bf380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x7e8c4d6bf400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x7e8c4d6bf480: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x7e8c4d6bf500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "bst_lifetime",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " fa[fd]fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50200004e280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50200004e300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50200004e380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50200004e400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x50200004e480: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "hash_oob",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x70dd78ef5d00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x70dd78ef5d80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x70dd78ef5e00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x70dd78ef5e80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x70dd78ef5f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "asan",
+      "subject_id": "matrix_oob",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " 00 00 00[f3]f3 f3 f3 00 00 00 00 00 00 00 00\n  0x70d8d5900100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x70d8d5900180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x70d8d5900200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x70d8d5900280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x70d8d5900300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n"
+    },
+    {
+      "detector": "msan",
+      "subject_id": "juliet_uninit_heap_array",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "0x55555561fa0d in xmalloc /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../../common/bench.h:35:15\n    #2 0x55555561fa0d in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:11:17\n    #3 0x55555561f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5\n    #4 0x55555561f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:16:42\n    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16\n    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3\n    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/bin/juliet_uninit_heap_array/msan+0x32304) (BuildId: 77f516b174070073936061dc156b98e301121d53)\n\nSUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/heap_array_no_init.c:12:5 in trigger\nMemorySanitizer: 1 warnings reported.\n"
+    },
+    {
+      "detector": "msan",
+      "subject_id": "juliet_uninit_partial_int",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "1 0x55555561fa18 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../../common/bench.h:35:15\n    #2 0x55555561fa18 in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:11:17\n    #3 0x55555561f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5\n    #4 0x55555561f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:17:42\n    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16\n    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3\n    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/bin/juliet_uninit_partial_int/msan+0x32304) (BuildId: fe77f785fbcdd8d15886dfa9d836c1df426e0ff8)\n\nSUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c:13:5 in trigger\nMemorySanitizer: 1 warnings reported.\n"
+    },
+    {
+      "detector": "msan",
+      "subject_id": "juliet_uninit_partial_struct",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "fa10 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../../common/bench.h:35:15\n    #2 0x55555561fa10 in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:13:27\n    #3 0x55555561f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5\n    #4 0x55555561f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:20:42\n    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16\n    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3\n    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/bin/juliet_uninit_partial_struct/msan+0x32304) (BuildId: 3d5b33c33fc11614e7c21508be93732b45613f2f)\n\nSUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:15:5 in trigger\nMemorySanitizer: 1 warnings reported.\n"
+    },
+    {
+      "detector": "msan",
+      "subject_id": "bst_uninitialized",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "/msan+0x6df76) (BuildId: 1bef03f58977a1f11a850a0408035c4810cf4c5a)\n    #1 0x55555561f8bd in xmalloc /home/gl_joulesteam/Joules-team-/applications/bst/../../common/bench.h:35:15\n    #2 0x55555561f8bd in inject /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:14:29\n    #3 0x55555561e9b4 in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5\n    #4 0x55555561e9b4 in main /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:21:42\n    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16\n    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3\n    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/bin/bst_uninitialized/msan+0x32304) (BuildId: 1bef03f58977a1f11a850a0408035c4810cf4c5a)\n\nSUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/applications/bst/uninitialized_memory.c:16:5 in inject\nMemorySanitizer: 1 warnings reported.\n"
+    },
+    {
+      "detector": "msan",
+      "subject_id": "hash_uninitialized",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "094bffd875fce54d426db612aff)\n    #1 0x55555562310d in xmalloc /home/gl_joulesteam/Joules-team-/applications/hash_table/../../common/bench.h:35:15\n    #2 0x55555562310d in inject /home/gl_joulesteam/Joules-team-/applications/hash_table/uninitialized_memory.c:12:25\n    #3 0x555555620be4 in run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5\n    #4 0x555555620be4 in main /home/gl_joulesteam/Joules-team-/applications/hash_table/uninitialized_memory.c:19:42\n    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16\n    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3\n    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/bin/hash_uninitialized/msan+0x32304) (BuildId: d301cd8b6f904094bffd875fce54d426db612aff)\n\nSUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/applications/hash_table/uninitialized_memory.c:14:5 in inject\nMemorySanitizer: 1 warnings reported.\n"
+    },
+    {
+      "detector": "msan",
+      "subject_id": "matrix_uninitialized",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "  #1 0x55555561f91d in xmalloc /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/../../common/bench.h:35:15\n    #2 0x55555561f91d in inject /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:14:28\n    #3 0x55555561f2b6 in run_matrix /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/matrix_core.h:68:5\n    #4 0x55555561f2b6 in main /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:21:42\n    #5 0x7ffff7c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16\n    #6 0x7ffff7c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3\n    #7 0x555555586304 in _start (/home/gl_joulesteam/Joules-team-/bin/matrix_uninitialized/msan+0x32304) (BuildId: 61c063a0096acf0354b6fd681e3f293e457fa1d7)\n\nSUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:16:5 in inject\nMemorySanitizer: 1 warnings reported.\n"
+    },
+    {
+      "detector": "tsan",
+      "subject_id": "juliet_race_global",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "steam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (tsan+0xdf137) (BuildId: a716511fee33790822a8407ca730aaa46c5db9f6)\n    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/global_integer_race.c:28:42 (tsan+0xdf137)\n\n  Thread T1 (tid=3262617, finished) created by main thread at:\n    #0 pthread_create <null> (tsan+0x605ff) (BuildId: a716511fee33790822a8407ca730aaa46c5db9f6)\n    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/global_integer_race.c:21:5 (tsan+0xdf322) (BuildId: a716511fee33790822a8407ca730aaa46c5db9f6)\n    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (tsan+0xdf137) (BuildId: a716511fee33790822a8407ca730aaa46c5db9f6)\n    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/global_integer_race.c:28:42 (tsan+0xdf137)\n\nSUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/juliet/data_race/global_integer_race.c:8:63 in worker\n==================\nThreadSanitizer: reported 1 warnings\n"
+    },
+    {
+      "detector": "tsan",
+      "subject_id": "juliet_race_control",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "/home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (tsan+0xdf137) (BuildId: 3f27340df95769260346160052f7360936d78a4e)\n    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:32:42 (tsan+0xdf137)\n\n  Thread T2 (tid=3262624, running) created by main thread at:\n    #0 pthread_create <null> (tsan+0x605ff) (BuildId: 3f27340df95769260346160052f7360936d78a4e)\n    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:26:5 (tsan+0xdf354) (BuildId: 3f27340df95769260346160052f7360936d78a4e)\n    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (tsan+0xdf137) (BuildId: 3f27340df95769260346160052f7360936d78a4e)\n    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c:32:42 (tsan+0xdf137)\n\nSUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/juliet/data_race/control_flow_race.c in worker\n==================\nThreadSanitizer: reported 1 warnings\n"
+    },
+    {
+      "detector": "tsan",
+      "subject_id": "juliet_race_byref",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "oules-team-/juliet/data_race/../juliet_driver.h:22:5 (tsan+0xdf137) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)\n    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:28:42 (tsan+0xdf137)\n\n  Thread T1 (tid=3262629, running) created by main thread at:\n    #0 pthread_create <null> (tsan+0x605ff) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)\n    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:21:5 (tsan+0xdf33b) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)\n    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (tsan+0xdf137) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)\n    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:28:42 (tsan+0xdf137)\n\nSUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:7:64 in worker\n==================\nThreadSanitizer: reported 1 warnings\n"
+    },
+    {
+      "detector": "tsan",
+      "subject_id": "bst_race",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "6745e1dda7017f969d9f0ffa33f1)\n    #2 run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5 (tsan+0xdf399) (BuildId: fa48972b37186745e1dda7017f969d9f0ffa33f1)\n    #3 main /home/gl_joulesteam/Joules-team-/applications/bst/data_race.c:32:42 (tsan+0xdf399)\n\n  Thread T5 (tid=3262639, finished) created by main thread at:\n    #0 pthread_create <null> (tsan+0x605ff) (BuildId: fa48972b37186745e1dda7017f969d9f0ffa33f1)\n    #1 inject /home/gl_joulesteam/Joules-team-/applications/bst/data_race.c:25:5 (tsan+0xdf5e2) (BuildId: fa48972b37186745e1dda7017f969d9f0ffa33f1)\n    #2 run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5 (tsan+0xdf399) (BuildId: fa48972b37186745e1dda7017f969d9f0ffa33f1)\n    #3 main /home/gl_joulesteam/Joules-team-/applications/bst/data_race.c:32:42 (tsan+0xdf399)\n\nSUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/applications/bst/data_race.c:10:69 in race_worker\n==================\nThreadSanitizer: reported 1 warnings\n"
+    },
+    {
+      "detector": "tsan",
+      "subject_id": "hash_race",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5 (tsan+0xdfb6f) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)\n    #3 main /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:36:42 (tsan+0xdfb6f)\n\n  Thread T5 (tid=3262649, finished) created by main thread at:\n    #0 pthread_create <null> (tsan+0x605ff) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)\n    #1 inject /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:29:5 (tsan+0xe0090) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)\n    #2 run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5 (tsan+0xdfb6f) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)\n    #3 main /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:36:42 (tsan+0xdfb6f)\n\nSUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c in race_worker\n==================\nThreadSanitizer: reported 1 warnings\n"
+    },
+    {
+      "detector": "tsan",
+      "subject_id": "matrix_race",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "plications/parallel_matrix/matrix_core.h:68:5 (tsan+0xdf5d7) (BuildId: be2bb946040ca8d1f475f53967782a9f80cd342a)\n    #3 main /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/data_race.c:32:42 (tsan+0xdf5d7)\n\n  Thread T5 (tid=3262659, finished) created by main thread at:\n    #0 pthread_create <null> (tsan+0x605ff) (BuildId: be2bb946040ca8d1f475f53967782a9f80cd342a)\n    #1 inject /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/data_race.c:25:5 (tsan+0xdf82b) (BuildId: be2bb946040ca8d1f475f53967782a9f80cd342a)\n    #2 run_matrix /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/matrix_core.h:68:5 (tsan+0xdf5d7) (BuildId: be2bb946040ca8d1f475f53967782a9f80cd342a)\n    #3 main /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/data_race.c:32:42 (tsan+0xdf5d7)\n\nSUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/data_race.c:9:64 in race_worker\n==================\nThreadSanitizer: reported 1 warnings\n"
+    },
+    {
+      "detector": "memcheck",
+      "subject_id": "juliet_lifetime_char_leak",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": " use at exit: 10,000 bytes in 1 blocks\n==3262663==   total heap usage: 3 allocs, 2 frees, 8,014,096 bytes allocated\n==3262663== \n==3262663== 10,000 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==3262663==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)\n==3262663==    by 0x109775: xmalloc (bench.h:35)\n==3262663==    by 0x109775: trigger (char_memory_leak.c:12)\n==3262663==    by 0x1095F9: run_juliet_case (juliet_driver.h:22)\n==3262663==    by 0x1095F9: main (char_memory_leak.c:18)\n==3262663== \n==3262663== LEAK SUMMARY:\n==3262663==    definitely lost: 10,000 bytes in 1 blocks\n==3262663==    indirectly lost: 0 bytes in 0 blocks\n==3262663==      possibly lost: 0 bytes in 0 blocks\n==3262663==    still reachable: 0 bytes in 0 blocks\n==3262663==         suppressed: 0 bytes in 0 blocks\n==3262663== \n==3262663== For lists of detected and suppressed errors, rerun with: -s\n==3262663== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n"
+    },
+    {
+      "detector": "memcheck",
+      "subject_id": "juliet_lifetime_int64_leak",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "se at exit: 80,000 bytes in 1 blocks\n==3262664==   total heap usage: 3 allocs, 2 frees, 8,084,096 bytes allocated\n==3262664== \n==3262664== 80,000 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==3262664==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)\n==3262664==    by 0x109762: xmalloc (bench.h:35)\n==3262664==    by 0x109762: trigger (int64_memory_leak.c:11)\n==3262664==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)\n==3262664==    by 0x1095E9: main (int64_memory_leak.c:17)\n==3262664== \n==3262664== LEAK SUMMARY:\n==3262664==    definitely lost: 80,000 bytes in 1 blocks\n==3262664==    indirectly lost: 0 bytes in 0 blocks\n==3262664==      possibly lost: 0 bytes in 0 blocks\n==3262664==    still reachable: 0 bytes in 0 blocks\n==3262664==         suppressed: 0 bytes in 0 blocks\n==3262664== \n==3262664== For lists of detected and suppressed errors, rerun with: -s\n==3262664== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n"
+    },
+    {
+      "detector": "memcheck",
+      "subject_id": "hash_lifetime",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "  in use at exit: 72 bytes in 1 blocks\n==3262665==   total heap usage: 50,020 allocs, 50,019 frees, 6,129,288 bytes allocated\n==3262665== \n==3262665== 72 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==3262665==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)\n==3262665==    by 0x109E1C: xmalloc (bench.h:35)\n==3262665==    by 0x109E1C: inject (lifetime_deallocation.c:11)\n==3262665==    by 0x109B5D: run_hash (hash_core.h:65)\n==3262665==    by 0x109B5D: main (lifetime_deallocation.c:18)\n==3262665== \n==3262665== LEAK SUMMARY:\n==3262665==    definitely lost: 72 bytes in 1 blocks\n==3262665==    indirectly lost: 0 bytes in 0 blocks\n==3262665==      possibly lost: 0 bytes in 0 blocks\n==3262665==    still reachable: 0 bytes in 0 blocks\n==3262665==         suppressed: 0 bytes in 0 blocks\n==3262665== \n==3262665== For lists of detected and suppressed errors, rerun with: -s\n==3262665== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n"
+    },
+    {
+      "detector": "memcheck",
+      "subject_id": "matrix_lifetime",
+      "status": "passed",
+      "detected": true,
+      "workload_complete": true,
+      "return_code": 0,
+      "detail": "n use at exit: 1,024 bytes in 1 blocks\n==3262670==   total heap usage: 11 allocs, 10 frees, 399,648 bytes allocated\n==3262670== \n==3262670== 1,024 bytes in 1 blocks are definitely lost in loss record 1 of 1\n==3262670==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)\n==3262670==    by 0x109B1B: xmalloc (bench.h:35)\n==3262670==    by 0x109B1B: inject (lifetime_deallocation.c:12)\n==3262670==    by 0x10994F: run_matrix (matrix_core.h:68)\n==3262670==    by 0x10994F: main (lifetime_deallocation.c:18)\n==3262670== \n==3262670== LEAK SUMMARY:\n==3262670==    definitely lost: 1,024 bytes in 1 blocks\n==3262670==    indirectly lost: 0 bytes in 0 blocks\n==3262670==      possibly lost: 0 bytes in 0 blocks\n==3262670==    still reachable: 0 bytes in 0 blocks\n==3262670==         suppressed: 0 bytes in 0 blocks\n==3262670== \n==3262670== For lists of detected and suppressed errors, rerun with: -s\n==3262670== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)\n"
+    }
+  ]
+}

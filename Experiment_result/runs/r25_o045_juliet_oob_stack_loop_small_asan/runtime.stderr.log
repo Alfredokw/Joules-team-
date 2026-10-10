@@ -1,0 +1,49 @@
+=================================================================
+==3465765==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7d170eb0002a at pc 0x5f1295c492ab bp 0x7ffc56af2810 sp 0x7ffc56af2808
+READ of size 1 at 0x7d170eb0002a thread T0
+    #0 0x5f1295c492aa in trigger /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/stack_loop_overread.c:14:74
+    #1 0x5f1295c48fa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../juliet_driver.h:22:5
+    #2 0x5f1295c48fa7 in main /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/stack_loop_overread.c:17:42
+    #3 0x7d1710c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7d1710c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x5f1295b6f364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r25_o045_juliet_oob_stack_loop_small_asan/program+0x2c364) (BuildId: 4aac88359442fd7353c1204c75bd346192b1cf65)
+
+Address 0x7d170eb0002a is located in stack of thread T0 at offset 42 in frame
+    #0 0x5f1295c491bf in trigger /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/stack_loop_overread.c:10
+
+  This frame has 1 object(s):
+    [32, 42) 'source' (line 12) <== Memory access at offset 42 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/stack_loop_overread.c:14:74 in trigger
+Shadow bytes around the buggy address:
+  0x7d170eaffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eaffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eaffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eafff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eafff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x7d170eb00000: f1 f1 f1 f1 00[02]f3 f3 00 00 00 00 00 00 00 00
+  0x7d170eb00080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eb00100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eb00180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eb00200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7d170eb00280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

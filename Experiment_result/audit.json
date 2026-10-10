@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "scheduled_rows": 7440,
+  "warmup_rows": 240,
+  "measured_rows": 7200,
+  "invalid_rows": 1,
+  "missing_metric_rows": 1,
+  "termination_status": {
+    "completed": 7200
+  },
+  "detections_by_configuration": {
+    "asan": 660,
+    "memcheck": 960,
+    "tsan": 480,
+    "msan": 360
+  },
+  "errors": [
+    "1 measured rows have missing required metrics",
+    "1 measured rows are marked invalid"
+  ]
+}

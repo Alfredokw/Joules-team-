@@ -1,0 +1,62 @@
+=================================================================
+==3437541==ERROR: AddressSanitizer: heap-use-after-free on address 0x50b000000040 at pc 0x56dbeb6a8241 bp 0x7ffd072fc340 sp 0x7ffd072fc338
+READ of size 1 at 0x50b000000040 thread T0
+    #0 0x56dbeb6a8240 in trigger /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:15:39
+    #1 0x56dbeb6a7fa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/../juliet_driver.h:22:5
+    #2 0x56dbeb6a7fa7 in main /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:18:42
+    #3 0x77d74f82a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x77d74f82a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x56dbeb5ce364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r21_o164_juliet_lifetime_uaf_small_asan/program+0x2c364) (BuildId: 8617dd71a53f9b63bc2a910e8bd5e62703e55ca5)
+
+0x50b000000040 is located 0 bytes inside of 100-byte region [0x50b000000040,0x50b0000000a4)
+freed by thread T0 here:
+    #0 0x56dbeb668f1a in free (/home/gl_joulesteam/Joules-team-/results/runs/r21_o164_juliet_lifetime_uaf_small_asan/program+0xc6f1a) (BuildId: 8617dd71a53f9b63bc2a910e8bd5e62703e55ca5)
+    #1 0x56dbeb6a81e6 in trigger /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:13:5
+    #2 0x56dbeb6a7fa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/../juliet_driver.h:22:5
+    #3 0x56dbeb6a7fa7 in main /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:18:42
+    #4 0x77d74f82a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #5 0x77d74f82a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #6 0x56dbeb5ce364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r21_o164_juliet_lifetime_uaf_small_asan/program+0x2c364) (BuildId: 8617dd71a53f9b63bc2a910e8bd5e62703e55ca5)
+
+previously allocated by thread T0 here:
+    #0 0x56dbeb6691b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r21_o164_juliet_lifetime_uaf_small_asan/program+0xc71b3) (BuildId: 8617dd71a53f9b63bc2a910e8bd5e62703e55ca5)
+    #1 0x56dbeb6a81c4 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/../../common/bench.h:35:15
+    #2 0x56dbeb6a81c4 in trigger /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:11:18
+    #3 0x56dbeb6a7fa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/../juliet_driver.h:22:5
+    #4 0x56dbeb6a7fa7 in main /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:18:42
+    #5 0x77d74f82a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x77d74f82a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x56dbeb5ce364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r21_o164_juliet_lifetime_uaf_small_asan/program+0x2c364) (BuildId: 8617dd71a53f9b63bc2a910e8bd5e62703e55ca5)
+
+SUMMARY: AddressSanitizer: heap-use-after-free /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/use_after_free.c:15:39 in trigger
+Shadow bytes around the buggy address:
+  0x50affffffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x50affffffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x50affffffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x50afffffff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x50afffffff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x50b000000000: fa fa fa fa fa fa fa fa[fd]fd fd fd fd fd fd fd
+  0x50b000000080: fd fd fd fd fd fa fa fa fa fa fa fa fa fa fa fa
+  0x50b000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x50b000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x50b000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x50b000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

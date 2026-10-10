@@ -1,0 +1,53 @@
+=================================================================
+==3310441==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x50200000001a at pc 0x5f7280b4025d bp 0x7ffe13935ca0 sp 0x7ffe13935c98
+READ of size 1 at 0x50200000001a thread T0
+    #0 0x5f7280b4025c in trigger /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_loop_overread.c:15:74
+    #1 0x5f7280b3ffa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../juliet_driver.h:22:5
+    #2 0x5f7280b3ffa7 in main /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_loop_overread.c:19:42
+    #3 0x7c69ba82a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7c69ba82a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x5f7280a66364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r05_o220_juliet_oob_heap_loop_large_asan/program+0x2c364) (BuildId: c3ac98264e81168799803487d52648c570f20ad3)
+
+0x50200000001a is located 0 bytes after 10-byte region [0x502000000010,0x50200000001a)
+allocated by thread T0 here:
+    #0 0x5f7280b011b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r05_o220_juliet_oob_heap_loop_large_asan/program+0xc71b3) (BuildId: c3ac98264e81168799803487d52648c570f20ad3)
+    #1 0x5f7280b401c4 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../../common/bench.h:35:15
+    #2 0x5f7280b401c4 in trigger /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_loop_overread.c:12:20
+    #3 0x5f7280b3ffa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../juliet_driver.h:22:5
+    #4 0x5f7280b3ffa7 in main /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_loop_overread.c:19:42
+    #5 0x7c69ba82a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7c69ba82a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x5f7280a66364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r05_o220_juliet_oob_heap_loop_large_asan/program+0x2c364) (BuildId: c3ac98264e81168799803487d52648c570f20ad3)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_loop_overread.c:15:74 in trigger
+Shadow bytes around the buggy address:
+  0x501ffffffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501ffffffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501ffffffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501fffffff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501fffffff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x502000000000: fa fa 00[02]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

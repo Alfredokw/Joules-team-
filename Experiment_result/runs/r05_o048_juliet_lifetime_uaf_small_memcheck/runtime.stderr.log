@@ -1,0 +1,30 @@
+==3304680== Memcheck, a memory error detector
+==3304680== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3304680== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3304680== Command: /home/gl_joulesteam/Joules-team-/results/runs/r05_o048_juliet_lifetime_uaf_small_memcheck/program --size small --threads 4 --seed 20261002
+==3304680== 
+==3304680== Invalid read of size 1
+==3304680==    at 0x1096AF: trigger (use_after_free.c:15)
+==3304680==    by 0x1095A7: run_juliet_case (juliet_driver.h:22)
+==3304680==    by 0x1095A7: main (use_after_free.c:18)
+==3304680==  Address 0x521c080 is 0 bytes inside a block of size 100 free'd
+==3304680==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3304680==    by 0x1096A2: trigger (use_after_free.c:13)
+==3304680==    by 0x1095A7: run_juliet_case (juliet_driver.h:22)
+==3304680==    by 0x1095A7: main (use_after_free.c:18)
+==3304680==  Block was alloc'd at
+==3304680==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3304680==    by 0x10968F: xmalloc (bench.h:35)
+==3304680==    by 0x10968F: trigger (use_after_free.c:11)
+==3304680==    by 0x1095A7: run_juliet_case (juliet_driver.h:22)
+==3304680==    by 0x1095A7: main (use_after_free.c:18)
+==3304680== 
+==3304680== 
+==3304680== HEAP SUMMARY:
+==3304680==     in use at exit: 0 bytes in 0 blocks
+==3304680==   total heap usage: 3 allocs, 3 frees, 8,004,196 bytes allocated
+==3304680== 
+==3304680== All heap blocks were freed -- no leaks are possible
+==3304680== 
+==3304680== For lists of detected and suppressed errors, rerun with: -s
+==3304680== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

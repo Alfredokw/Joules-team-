@@ -1,0 +1,38 @@
+{
+  "run_id": "r19_o010_juliet_oob_stack_loop_small_tsan",
+  "measurement_scope": "build_and_run",
+  "subject_id": "juliet_oob_stack_loop",
+  "workload": "small",
+  "input_n": 1000000,
+  "configuration": "tsan",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "-fsanitize=thread",
+    "/home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/stack_loop_overread.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r19_o010_juliet_oob_stack_loop_small_tsan/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r19_o010_juliet_oob_stack_loop_small_tsan/program",
+    "--size",
+    "small",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.28605592902749777,
+  "runtime_seconds": 0.08986848592758179,
+  "stage_status": "completed"
+}

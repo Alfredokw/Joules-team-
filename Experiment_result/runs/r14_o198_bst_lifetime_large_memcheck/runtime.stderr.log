@@ -1,0 +1,30 @@
+==3382271== Memcheck, a memory error detector
+==3382271== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3382271== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3382271== Command: /home/gl_joulesteam/Joules-team-/results/runs/r14_o198_bst_lifetime_large_memcheck/program --size large --threads 4 --seed 20261002
+==3382271== 
+==3382271== Invalid read of size 8
+==3382271==    at 0x1098B5: inject (lifetime_deallocation.c:15)
+==3382271==    by 0x10976A: run_bst (bst_core.h:63)
+==3382271==    by 0x10976A: main (lifetime_deallocation.c:18)
+==3382271==  Address 0x5e9ebf0 is 0 bytes inside a block of size 8 free'd
+==3382271==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3382271==    by 0x1098B4: inject (lifetime_deallocation.c:14)
+==3382271==    by 0x10976A: run_bst (bst_core.h:63)
+==3382271==    by 0x10976A: main (lifetime_deallocation.c:18)
+==3382271==  Block was alloc'd at
+==3382271==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3382271==    by 0x109899: xmalloc (bench.h:35)
+==3382271==    by 0x109899: inject (lifetime_deallocation.c:12)
+==3382271==    by 0x10976A: run_bst (bst_core.h:63)
+==3382271==    by 0x10976A: main (lifetime_deallocation.c:18)
+==3382271== 
+==3382271== 
+==3382271== HEAP SUMMARY:
+==3382271==     in use at exit: 0 bytes in 0 blocks
+==3382271==   total heap usage: 240,009 allocs, 240,009 frees, 9,605,384 bytes allocated
+==3382271== 
+==3382271== All heap blocks were freed -- no leaks are possible
+==3382271== 
+==3382271== For lists of detected and suppressed errors, rerun with: -s
+==3382271== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

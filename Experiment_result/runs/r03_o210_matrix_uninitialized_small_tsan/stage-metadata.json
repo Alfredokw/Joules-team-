@@ -1,0 +1,38 @@
+{
+  "run_id": "r03_o210_matrix_uninitialized_small_tsan",
+  "measurement_scope": "build_and_run",
+  "subject_id": "matrix_uninitialized",
+  "workload": "small",
+  "input_n": 128,
+  "configuration": "tsan",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "-fsanitize=thread",
+    "/home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r03_o210_matrix_uninitialized_small_tsan/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r03_o210_matrix_uninitialized_small_tsan/program",
+    "--size",
+    "small",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.3268058504909277,
+  "runtime_seconds": 0.04387321136891842,
+  "stage_status": "completed"
+}

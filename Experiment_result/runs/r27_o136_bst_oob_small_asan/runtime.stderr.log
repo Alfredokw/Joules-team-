@@ -1,0 +1,52 @@
+=================================================================
+==3484895==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x79a23fe71280 at pc 0x5e2e0dbcd5ba bp 0x7fff7f4d4590 sp 0x7fff7f4d4588
+READ of size 8 at 0x79a23fe71280 thread T0
+    #0 0x5e2e0dbcd5b9 in inject /home/gl_joulesteam/Joules-team-/applications/bst/out_of_bounds.c:13:24
+    #1 0x5e2e0dbcd24c in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5
+    #2 0x5e2e0dbcd24c in main /home/gl_joulesteam/Joules-team-/applications/bst/out_of_bounds.c:16:42
+    #3 0x79a24022a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x79a24022a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x5e2e0daf3364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r27_o136_bst_oob_small_asan/program+0x2c364) (BuildId: 1f27c9496fba5268ba1eadd9b76dba2939582c12)
+
+0x79a23fe71280 is located 0 bytes after 400000-byte region [0x79a23fe0f800,0x79a23fe71280)
+allocated by thread T0 here:
+    #0 0x5e2e0db8e1b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r27_o136_bst_oob_small_asan/program+0xc71b3) (BuildId: 1f27c9496fba5268ba1eadd9b76dba2939582c12)
+    #1 0x5e2e0dbcce80 in xmalloc /home/gl_joulesteam/Joules-team-/applications/bst/../../common/bench.h:35:15
+    #2 0x5e2e0dbcce80 in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:43:25
+    #3 0x5e2e0dbcce80 in main /home/gl_joulesteam/Joules-team-/applications/bst/out_of_bounds.c:16:42
+    #4 0x79a24022a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #5 0x79a24022a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #6 0x5e2e0daf3364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r27_o136_bst_oob_small_asan/program+0x2c364) (BuildId: 1f27c9496fba5268ba1eadd9b76dba2939582c12)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/gl_joulesteam/Joules-team-/applications/bst/out_of_bounds.c:13:24 in inject
+Shadow bytes around the buggy address:
+  0x79a23fe71000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x79a23fe71080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x79a23fe71100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x79a23fe71180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x79a23fe71200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x79a23fe71280:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x79a23fe71300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x79a23fe71380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x79a23fe71400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x79a23fe71480: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x79a23fe71500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

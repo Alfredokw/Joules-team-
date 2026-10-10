@@ -1,0 +1,49 @@
+=================================================================
+==3266203==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x78d6113000a0 at pc 0x58c130f138c3 bp 0x7ffc07689e70 sp 0x7ffc07689e68
+READ of size 8 at 0x78d6113000a0 thread T0
+    #0 0x58c130f138c2 in inject /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/out_of_bounds.c:15:34
+    #1 0x58c130f13432 in run_matrix /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/matrix_core.h:68:5
+    #2 0x58c130f13432 in main /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/out_of_bounds.c:18:42
+    #3 0x78d61322a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x78d61322a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x58c130e39364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/W_o106_matrix_oob_large_asan/program+0x2c364) (BuildId: 1b3ce281e7996dbea68fd3485cc4e8c5fce74c12)
+
+Address 0x78d6113000a0 is located in stack of thread T0 at offset 160 in frame
+    #0 0x58c130f1378f in inject /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/out_of_bounds.c:10
+
+  This frame has 1 object(s):
+    [32, 160) 'sample' (line 12) <== Memory access at offset 160 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/out_of_bounds.c:15:34 in inject
+Shadow bytes around the buggy address:
+  0x78d6112ffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d6112ffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d6112fff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d6112fff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d611300000: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x78d611300080: 00 00 00 00[f3]f3 f3 f3 00 00 00 00 00 00 00 00
+  0x78d611300100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d611300180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d611300200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d611300280: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x78d611300300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

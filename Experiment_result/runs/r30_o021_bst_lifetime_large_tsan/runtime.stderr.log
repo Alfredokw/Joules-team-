@@ -1,0 +1,16 @@
+==================
+WARNING: ThreadSanitizer: heap-use-after-free (pid=3505193)
+  Read of size 8 at 0x7204001d4c00 by main thread:
+    #0 inject /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:15:24 (program+0xdf516) (BuildId: 7e905ce5bbb6ae04b400833d8af63cc36a30c9ab)
+    #1 run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5 (program+0xdf360) (BuildId: 7e905ce5bbb6ae04b400833d8af63cc36a30c9ab)
+    #2 main /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:18:42 (program+0xdf360)
+
+  Previous write of size 8 at 0x7204001d4c00 by main thread:
+    #0 free <null> (program+0x5f333) (BuildId: 7e905ce5bbb6ae04b400833d8af63cc36a30c9ab)
+    #1 inject /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:14:5 (program+0xdf50e) (BuildId: 7e905ce5bbb6ae04b400833d8af63cc36a30c9ab)
+    #2 run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5 (program+0xdf360) (BuildId: 7e905ce5bbb6ae04b400833d8af63cc36a30c9ab)
+    #3 main /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:18:42 (program+0xdf360)
+
+SUMMARY: ThreadSanitizer: heap-use-after-free /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:15:24 in inject
+==================
+ThreadSanitizer: reported 1 warnings

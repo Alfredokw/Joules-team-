@@ -1,0 +1,39 @@
+{
+  "run_id": "r01_o201_hash_race_small_asan",
+  "measurement_scope": "build_and_run",
+  "subject_id": "hash_race",
+  "workload": "small",
+  "input_n": 50000,
+  "configuration": "asan",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "-fsanitize=address",
+    "-fsanitize-recover=address",
+    "/home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r01_o201_hash_race_small_asan/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r01_o201_hash_race_small_asan/program",
+    "--size",
+    "small",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.49945429898798466,
+  "runtime_seconds": 0.07210939284414053,
+  "stage_status": "completed"
+}

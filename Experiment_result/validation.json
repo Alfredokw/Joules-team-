@@ -1,0 +1,1175 @@
+{
+  "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+  "subject_count": 24,
+  "plain_repetitions_per_workload": 3,
+  "groups": {
+    "juliet": 12,
+    "derived": 12
+  },
+  "families": {
+    "out-of-bounds access": 6,
+    "lifetime/deallocation": 6,
+    "uninitialized memory": 6,
+    "data race": 6
+  },
+  "checks": [
+    {
+      "subject_id": "juliet_oob_heap_loop",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_loop",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_loop",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_loop",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_loop",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_loop",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_memcpy",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_memcpy",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_memcpy",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_memcpy",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_memcpy",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_heap_memcpy",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_stack_loop",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_stack_loop",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_stack_loop",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_stack_loop",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_stack_loop",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_oob_stack_loop",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_uaf",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_uaf",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_uaf",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_uaf",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_uaf",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_uaf",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_char_leak",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_char_leak",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_char_leak",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_char_leak",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_char_leak",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_char_leak",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_int64_leak",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_int64_leak",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_int64_leak",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_int64_leak",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_int64_leak",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_lifetime_int64_leak",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_heap_array",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_heap_array",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_heap_array",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_heap_array",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_heap_array",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_heap_array",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_int",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_int",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_int",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_int",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_int",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_int",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_struct",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_struct",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_struct",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_struct",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_struct",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_uninit_partial_struct",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_global",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_global",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_global",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_global",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_global",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_global",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_control",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_control",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_control",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_control",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_control",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_control",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_byref",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_byref",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_byref",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_byref",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_byref",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "juliet_race_byref",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_oob",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_oob",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_oob",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_oob",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_oob",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_oob",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_race",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_race",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_race",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_race",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_race",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "bst_race",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_oob",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_oob",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_oob",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_oob",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_oob",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_oob",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_race",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_race",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_race",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_race",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_race",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "hash_race",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_oob",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_oob",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_oob",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_oob",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_oob",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_oob",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_lifetime",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_lifetime",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_uninitialized",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_uninitialized",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_race",
+      "check": "plain_small_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_race",
+      "check": "plain_small_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_race",
+      "check": "plain_small_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_race",
+      "check": "plain_large_completes",
+      "repetition": 1,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_race",
+      "check": "plain_large_completes",
+      "repetition": 2,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    },
+    {
+      "subject_id": "matrix_race",
+      "check": "plain_large_completes",
+      "repetition": 3,
+      "passed": true,
+      "return_code": 0,
+      "detail": ""
+    }
+  ],
+  "limitations": [
+    "MSan and Valgrind Memcheck require final validation on the Ubuntu measurement host.",
+    "Large workloads must be pilot-calibrated and revalidated on the measurement host.",
+    "Undefined behavior can vary by compiler and allocator; admission requires successful host-specific pilot runs."
+  ],
+  "errors": []
+}

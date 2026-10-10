@@ -1,0 +1,15 @@
+
+=================================================================
+==3455530==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 2080000 byte(s) in 1 object(s) allocated from:
+    #0 0x6452c507a1b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r23_o219_juliet_lifetime_int64_leak_large_asan/program+0xc71b3) (BuildId: 48e878c745d8febed2f87a2fd95e95860defa248)
+    #1 0x6452c50b9312 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/../../common/bench.h:35:15
+    #2 0x6452c50b9312 in trigger /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/int64_memory_leak.c:11:30
+    #3 0x6452c50b8ffa in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/../juliet_driver.h:22:5
+    #4 0x6452c50b8ffa in main /home/gl_joulesteam/Joules-team-/juliet/lifetime_deallocation/int64_memory_leak.c:17:42
+    #5 0x78099002a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x78099002a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x6452c4fdf364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r23_o219_juliet_lifetime_int64_leak_large_asan/program+0x2c364) (BuildId: 48e878c745d8febed2f87a2fd95e95860defa248)
+
+SUMMARY: AddressSanitizer: 2080000 byte(s) leaked in 1 allocation(s).

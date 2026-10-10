@@ -1,0 +1,62 @@
+=================================================================
+==3291573==ERROR: AddressSanitizer: heap-use-after-free on address 0x5020003a9810 at pc 0x5c9d8368560b bp 0x7ffc10cd31c0 sp 0x7ffc10cd31b8
+READ of size 8 at 0x5020003a9810 thread T0
+    #0 0x5c9d8368560a in inject /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:15:24
+    #1 0x5c9d8368524c in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5
+    #2 0x5c9d8368524c in main /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:18:42
+    #3 0x788ecf22a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x788ecf22a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x5c9d835ab364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r03_o137_bst_lifetime_large_asan/program+0x2c364) (BuildId: eff2f9ccb2a4ff1c7aafc83ed26894bab7712754)
+
+0x5020003a9810 is located 0 bytes inside of 8-byte region [0x5020003a9810,0x5020003a9818)
+freed by thread T0 here:
+    #0 0x5c9d83645f1a in free (/home/gl_joulesteam/Joules-team-/results/runs/r03_o137_bst_lifetime_large_asan/program+0xc6f1a) (BuildId: eff2f9ccb2a4ff1c7aafc83ed26894bab7712754)
+    #1 0x5c9d836855f8 in inject /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:14:5
+    #2 0x5c9d8368524c in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5
+    #3 0x5c9d8368524c in main /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:18:42
+    #4 0x788ecf22a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #5 0x788ecf22a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #6 0x5c9d835ab364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r03_o137_bst_lifetime_large_asan/program+0x2c364) (BuildId: eff2f9ccb2a4ff1c7aafc83ed26894bab7712754)
+
+previously allocated by thread T0 here:
+    #0 0x5c9d836461b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r03_o137_bst_lifetime_large_asan/program+0xc71b3) (BuildId: eff2f9ccb2a4ff1c7aafc83ed26894bab7712754)
+    #1 0x5c9d836855a9 in xmalloc /home/gl_joulesteam/Joules-team-/applications/bst/../../common/bench.h:35:15
+    #2 0x5c9d836855a9 in inject /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:12:24
+    #3 0x5c9d8368524c in run_bst /home/gl_joulesteam/Joules-team-/applications/bst/bst_core.h:63:5
+    #4 0x5c9d8368524c in main /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:18:42
+    #5 0x788ecf22a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x788ecf22a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x5c9d835ab364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r03_o137_bst_lifetime_large_asan/program+0x2c364) (BuildId: eff2f9ccb2a4ff1c7aafc83ed26894bab7712754)
+
+SUMMARY: AddressSanitizer: heap-use-after-free /home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c:15:24 in inject
+Shadow bytes around the buggy address:
+  0x5020003a9580: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x5020003a9600: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x5020003a9680: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x5020003a9700: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x5020003a9780: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+=>0x5020003a9800: fa fa[fd]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x5020003a9880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x5020003a9900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x5020003a9980: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x5020003a9a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x5020003a9a80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

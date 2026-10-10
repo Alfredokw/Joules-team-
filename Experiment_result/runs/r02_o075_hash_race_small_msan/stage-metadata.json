@@ -1,0 +1,42 @@
+{
+  "run_id": "r02_o075_hash_race_small_msan",
+  "measurement_scope": "build_and_run",
+  "subject_id": "hash_race",
+  "workload": "small",
+  "input_n": 50000,
+  "configuration": "msan",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "-fsanitize=memory",
+    "-fsanitize-memory-track-origins=2",
+    "-fsanitize-recover=memory",
+    "-fPIE",
+    "-pie",
+    "/home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r02_o075_hash_race_small_msan/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r02_o075_hash_race_small_msan/program",
+    "--size",
+    "small",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.6235465267673135,
+  "runtime_seconds": 0.08295982982963324,
+  "stage_status": "completed"
+}

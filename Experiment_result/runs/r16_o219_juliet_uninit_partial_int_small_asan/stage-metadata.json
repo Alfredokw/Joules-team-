@@ -1,0 +1,39 @@
+{
+  "run_id": "r16_o219_juliet_uninit_partial_int_small_asan",
+  "measurement_scope": "build_and_run",
+  "subject_id": "juliet_uninit_partial_int",
+  "workload": "small",
+  "input_n": 1000000,
+  "configuration": "asan",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "-fsanitize=address",
+    "-fsanitize-recover=address",
+    "/home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_int_array.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r16_o219_juliet_uninit_partial_int_small_asan/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r16_o219_juliet_uninit_partial_int_small_asan/program",
+    "--size",
+    "small",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.29925790056586266,
+  "runtime_seconds": 0.03840813133865595,
+  "stage_status": "completed"
+}

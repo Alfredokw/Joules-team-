@@ -1,0 +1,54 @@
+=================================================================
+==3494100==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x50200000001a at pc 0x646f8119d066 bp 0x7ffce8c3ed70 sp 0x7ffce8c3e530
+READ of size 11 at 0x50200000001a thread T0
+    #0 0x646f8119d065 in __asan_memcpy (/home/gl_joulesteam/Joules-team-/results/runs/r28_o170_juliet_oob_heap_memcpy_large_asan/program+0xc5065) (BuildId: 3e5f6f2ae68f22fccc4ddc10c1a45494e7ad91ce)
+    #1 0x646f811de282 in trigger /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_memcpy_overread.c:16:5
+    #2 0x646f811ddfa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../juliet_driver.h:22:5
+    #3 0x646f811ddfa7 in main /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_memcpy_overread.c:21:42
+    #4 0x772a1f42a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #5 0x772a1f42a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #6 0x646f81104364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r28_o170_juliet_oob_heap_memcpy_large_asan/program+0x2c364) (BuildId: 3e5f6f2ae68f22fccc4ddc10c1a45494e7ad91ce)
+
+0x50200000001a is located 0 bytes after 10-byte region [0x502000000010,0x50200000001a)
+allocated by thread T0 here:
+    #0 0x646f8119f1b3 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r28_o170_juliet_oob_heap_memcpy_large_asan/program+0xc71b3) (BuildId: 3e5f6f2ae68f22fccc4ddc10c1a45494e7ad91ce)
+    #1 0x646f811de23f in xmalloc /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../../common/bench.h:35:15
+    #2 0x646f811de23f in trigger /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_memcpy_overread.c:12:20
+    #3 0x646f811ddfa7 in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/../juliet_driver.h:22:5
+    #4 0x646f811ddfa7 in main /home/gl_joulesteam/Joules-team-/juliet/out_of_bounds/heap_memcpy_overread.c:21:42
+    #5 0x772a1f42a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x772a1f42a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x646f81104364 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r28_o170_juliet_oob_heap_memcpy_large_asan/program+0x2c364) (BuildId: 3e5f6f2ae68f22fccc4ddc10c1a45494e7ad91ce)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/gl_joulesteam/Joules-team-/results/runs/r28_o170_juliet_oob_heap_memcpy_large_asan/program+0xc5065) (BuildId: 3e5f6f2ae68f22fccc4ddc10c1a45494e7ad91ce) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x501ffffffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501ffffffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501ffffffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501fffffff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501fffffff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x502000000000: fa fa 00[02]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb

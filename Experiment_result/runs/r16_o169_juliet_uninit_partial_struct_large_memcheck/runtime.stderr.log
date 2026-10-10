@@ -1,0 +1,58 @@
+==3397498== Memcheck, a memory error detector
+==3397498== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3397498== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3397498== Command: /home/gl_joulesteam/Joules-team-/results/runs/r16_o169_juliet_uninit_partial_struct_large_memcheck/program --size large --threads 4 --seed 20261002
+==3397498== 
+==3397498== Use of uninitialised value of size 8
+==3397498==    at 0x48C20BB: _itoa_word (_itoa.c:183)
+==3397498==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3397498==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3397498==    by 0x48C31B2: printf (printf.c:33)
+==3397498==    by 0x1097A5: trigger (partial_struct_array.c:15)
+==3397498==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3397498==    by 0x1095E9: main (partial_struct_array.c:20)
+==3397498==  Uninitialised value was created by a heap allocation
+==3397498==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3397498==    by 0x109769: xmalloc (bench.h:35)
+==3397498==    by 0x109769: trigger (partial_struct_array.c:13)
+==3397498==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3397498==    by 0x1095E9: main (partial_struct_array.c:20)
+==3397498== 
+==3397498== Conditional jump or move depends on uninitialised value(s)
+==3397498==    at 0x48C20CC: _itoa_word (_itoa.c:183)
+==3397498==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3397498==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3397498==    by 0x48C31B2: printf (printf.c:33)
+==3397498==    by 0x1097A5: trigger (partial_struct_array.c:15)
+==3397498==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3397498==    by 0x1095E9: main (partial_struct_array.c:20)
+==3397498==  Uninitialised value was created by a heap allocation
+==3397498==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3397498==    by 0x109769: xmalloc (bench.h:35)
+==3397498==    by 0x109769: trigger (partial_struct_array.c:13)
+==3397498==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3397498==    by 0x1095E9: main (partial_struct_array.c:20)
+==3397498== 
+==3397498== Conditional jump or move depends on uninitialised value(s)
+==3397498==    at 0x48CCD85: __printf_buffer (vfprintf-process-arg.c:186)
+==3397498==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3397498==    by 0x48C31B2: printf (printf.c:33)
+==3397498==    by 0x1097A5: trigger (partial_struct_array.c:15)
+==3397498==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3397498==    by 0x1095E9: main (partial_struct_array.c:20)
+==3397498==  Uninitialised value was created by a heap allocation
+==3397498==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3397498==    by 0x109769: xmalloc (bench.h:35)
+==3397498==    by 0x109769: trigger (partial_struct_array.c:13)
+==3397498==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3397498==    by 0x1095E9: main (partial_struct_array.c:20)
+==3397498== 
+==3397498== 
+==3397498== HEAP SUMMARY:
+==3397498==     in use at exit: 0 bytes in 0 blocks
+==3397498==   total heap usage: 3 allocs, 3 frees, 212,164,096 bytes allocated
+==3397498== 
+==3397498== All heap blocks were freed -- no leaks are possible
+==3397498== 
+==3397498== For lists of detected and suppressed errors, rerun with: -s
+==3397498== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

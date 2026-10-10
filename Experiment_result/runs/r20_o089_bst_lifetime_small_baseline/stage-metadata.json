@@ -1,0 +1,38 @@
+{
+  "run_id": "r20_o089_bst_lifetime_small_baseline",
+  "measurement_scope": "build_and_run",
+  "subject_id": "bst_lifetime",
+  "workload": "small",
+  "input_n": 10000,
+  "configuration": "baseline",
+  "compile_command": [
+    "clang",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-omit-frame-pointer",
+    "-fno-strict-aliasing",
+    "-pthread",
+    "/home/gl_joulesteam/Joules-team-/applications/bst/lifetime_deallocation.c",
+    "/home/gl_joulesteam/Joules-team-/applications/bst/musl_tree.c",
+    "-o",
+    "/home/gl_joulesteam/Joules-team-/results/runs/r20_o089_bst_lifetime_small_baseline/program"
+  ],
+  "runtime_command": [
+    "/home/gl_joulesteam/Joules-team-/results/runs/r20_o089_bst_lifetime_small_baseline/program",
+    "--size",
+    "small",
+    "--threads",
+    "4",
+    "--seed",
+    "20261002"
+  ],
+  "compile_return_code": 0,
+  "runtime_return_code": 0,
+  "build_seconds": 0.2623084047809243,
+  "runtime_seconds": 0.011859665624797344,
+  "stage_status": "completed"
+}

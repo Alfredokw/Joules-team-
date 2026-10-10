@@ -1,0 +1,20 @@
+==3465933==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x578b9575fb89 in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:15:5
+    #1 0x578b9575f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5
+    #2 0x578b9575f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:20:42
+    #3 0x7e6be682a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7e6be682a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x578b956c6304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r25_o050_juliet_uninit_partial_struct_small_msan/program+0x32304) (BuildId: 3d5b33c33fc11614e7c21508be93732b45613f2f)
+
+  Uninitialized value was created by a heap allocation
+    #0 0x578b95701f76 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r25_o050_juliet_uninit_partial_struct_small_msan/program+0x6df76) (BuildId: 3d5b33c33fc11614e7c21508be93732b45613f2f)
+    #1 0x578b9575fa10 in xmalloc /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../../common/bench.h:35:15
+    #2 0x578b9575fa10 in trigger /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:13:27
+    #3 0x578b9575f16c in run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/../juliet_driver.h:22:5
+    #4 0x578b9575f16c in main /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:20:42
+    #5 0x7e6be682a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7e6be682a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x578b956c6304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r25_o050_juliet_uninit_partial_struct_small_msan/program+0x32304) (BuildId: 3d5b33c33fc11614e7c21508be93732b45613f2f)
+
+SUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/juliet/uninitialized_memory/partial_struct_array.c:15:5 in trigger
+MemorySanitizer: 1 warnings reported.

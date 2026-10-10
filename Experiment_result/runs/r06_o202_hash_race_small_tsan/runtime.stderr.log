@@ -1,0 +1,25 @@
+==================
+WARNING: ThreadSanitizer: data race (pid=3317870)
+  Read of size 8 at 0x5555569e06a0 by thread T6:
+    #0 race_worker /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c (program+0xe04c1) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+
+  Previous write of size 8 at 0x5555569e06a0 by thread T5:
+    #0 race_worker /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c (program+0xe04f3) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+
+  Location is global 'operation_counter' of size 8 at 0x5555569e06a0 (program+0x148c6a0)
+
+  Thread T6 (tid=3317877, running) created by main thread at:
+    #0 pthread_create <null> (program+0x605ff) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+    #1 inject /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:30:5 (program+0xe00a4) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+    #2 run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5 (program+0xdfb6f) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+    #3 main /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:36:42 (program+0xdfb6f)
+
+  Thread T5 (tid=3317876, finished) created by main thread at:
+    #0 pthread_create <null> (program+0x605ff) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+    #1 inject /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:29:5 (program+0xe0090) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+    #2 run_hash /home/gl_joulesteam/Joules-team-/applications/hash_table/hash_core.h:65:5 (program+0xdfb6f) (BuildId: ec56b76a7bbe00940241e588f45bcd01e42ac4e1)
+    #3 main /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c:36:42 (program+0xdfb6f)
+
+SUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/applications/hash_table/data_race.c in race_worker
+==================
+ThreadSanitizer: reported 1 warnings

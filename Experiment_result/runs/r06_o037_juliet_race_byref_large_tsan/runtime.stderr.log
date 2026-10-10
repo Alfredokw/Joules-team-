@@ -1,0 +1,28 @@
+/usr/bin/llvm-symbolizer-18: error: '[stack]': No such file or directory
+==================
+WARNING: ThreadSanitizer: data race (pid=3312340)
+  Write of size 8 at 0x7fffffffdf70 by thread T2:
+    #0 worker /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:7:64 (program+0xdf3f8) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+
+  Previous write of size 8 at 0x7fffffffdf70 by thread T1:
+    #0 worker /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:7:64 (program+0xdf3f8) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+
+  Location is stack of main thread.
+
+  Location is global '??' at 0x7ffffffde000 ([stack]+0x1ff70)
+
+  Thread T2 (tid=3312343, running) created by main thread at:
+    #0 pthread_create <null> (program+0x605ff) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:22:5 (program+0xdf34f) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (program+0xdf137) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:28:42 (program+0xdf137)
+
+  Thread T1 (tid=3312342, running) created by main thread at:
+    #0 pthread_create <null> (program+0x605ff) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+    #1 trigger /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:21:5 (program+0xdf33b) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+    #2 run_juliet_case /home/gl_joulesteam/Joules-team-/juliet/data_race/../juliet_driver.h:22:5 (program+0xdf137) (BuildId: 2c9b80bc3da187641fd1817d696af037a32e0c53)
+    #3 main /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:28:42 (program+0xdf137)
+
+SUMMARY: ThreadSanitizer: data race /home/gl_joulesteam/Joules-team-/juliet/data_race/referenced_local_race.c:7:64 in worker
+==================
+ThreadSanitizer: reported 1 warnings

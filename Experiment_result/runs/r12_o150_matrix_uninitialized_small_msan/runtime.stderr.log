@@ -1,0 +1,20 @@
+==3364567==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x556d39f56a05 in inject /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:16:5
+    #1 0x556d39f562b6 in run_matrix /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/matrix_core.h:68:5
+    #2 0x556d39f562b6 in main /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:21:42
+    #3 0x7b9654e2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #4 0x7b9654e2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #5 0x556d39ebd304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r12_o150_matrix_uninitialized_small_msan/program+0x32304) (BuildId: 61c063a0096acf0354b6fd681e3f293e457fa1d7)
+
+  Uninitialized value was created by a heap allocation
+    #0 0x556d39ef8f76 in malloc (/home/gl_joulesteam/Joules-team-/results/runs/r12_o150_matrix_uninitialized_small_msan/program+0x6df76) (BuildId: 61c063a0096acf0354b6fd681e3f293e457fa1d7)
+    #1 0x556d39f5691d in xmalloc /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/../../common/bench.h:35:15
+    #2 0x556d39f5691d in inject /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:14:28
+    #3 0x556d39f562b6 in run_matrix /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/matrix_core.h:68:5
+    #4 0x556d39f562b6 in main /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:21:42
+    #5 0x7b9654e2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #6 0x7b9654e2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #7 0x556d39ebd304 in _start (/home/gl_joulesteam/Joules-team-/results/runs/r12_o150_matrix_uninitialized_small_msan/program+0x32304) (BuildId: 61c063a0096acf0354b6fd681e3f293e457fa1d7)
+
+SUMMARY: MemorySanitizer: use-of-uninitialized-value /home/gl_joulesteam/Joules-team-/applications/parallel_matrix/uninitialized_memory.c:16:5 in inject
+MemorySanitizer: 1 warnings reported.
