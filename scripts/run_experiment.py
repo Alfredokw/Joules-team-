@@ -15,6 +15,7 @@ import statistics
 import subprocess
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 from experimentlib import ROOT, configured_tool, load_json, load_manifest
@@ -56,6 +57,9 @@ RESULT_FIELDS = [
     "execution_time_seconds",
     "measurement_wall_seconds",
     "total_energy_consumption_joules",
+    "energy_counter_wrap_count",
+    "package_energy_counter_wrap_count",
+    "dram_energy_counter_wrap_count",
     "average_power_watts",
     "peak_power_watts",
     "power_variability_watts",
@@ -76,6 +80,16 @@ RESULT_FIELDS = [
     "artifact_dir",
 ]
 
+COOLDOWN_EVENT_FIELDS = [
+    "event_key",
+    "event_type",
+    "before_run_id",
+    "before_repetition",
+    "configured_seconds",
+    "started_at_utc",
+    "completed_at_utc",
+]
+
 
 def optional_float(value):
     try:
@@ -85,64 +99,80 @@ def optional_float(value):
         return None
 
 
-def read_energibridge(path: Path):
+def read_energibridge(path: Path, counter_max_joules: float):
     result = {
         "energy_joules": None,
         "average_power_watts": None,
         "duration_seconds": None,
         "samples": [],
+        "counter_wrap_count": 0,
+        "package_counter_wrap_count": 0,
+        "dram_counter_wrap_count": 0,
     }
     if not path.exists() or path.stat().st_size == 0:
         return result
-
-    with path.open(newline="", encoding="utf-8") as handle:
+    with path.open(newline="", encoding="utf-8", errors="replace") as handle:
         rows = list(csv.DictReader(handle))
+    if not rows:
+        return result
+    if counter_max_joules <= 0:
+        return result
 
     points = []
-    previous = None
-
     for row in rows:
-        values = [
-            optional_float(row.get(key))
-            for key in (
-                "Time",
-                "PACKAGE_ENERGY (J)",
-                "DRAM_ENERGY (J)",
-            )
-        ]
-        if any(value is None for value in values):
+        timestamp = optional_float(row.get("Time"))
+        package = optional_float(row.get("PACKAGE_ENERGY (J)"))
+        dram = optional_float(row.get("DRAM_ENERGY (J)"))
+        if any(value is None for value in (timestamp, package, dram)):
             return result
-
-        t, package, dram = values
-
-        if previous is not None:
-            if any(value < old for value, old in zip(values, previous)):
-                # Reject counter resets/wraps or reversed timestamps.
-                return result
-        previous = values
-
-        if points and t == points[-1][0]:
-            # Keep the first reading at a duplicated timestamp.
+        if not (0 <= package < counter_max_joules and 0 <= dram < counter_max_joules):
+            return result
+        if points and timestamp < points[-1][0]:
+            return result
+        if points and timestamp == points[-1][0]:
+            # EnergiBridge may repeat its first timestamp; retain one sample only.
             continue
-
-        points.append((t, package + dram))
+        points.append((timestamp, package, dram))
 
     if len(points) < 2:
         return result
 
+    package_energy = 0.0
+    dram_energy = 0.0
+    package_wraps = 0
+    dram_wraps = 0
+    powers = []
+    for (t0, p0, d0), (t1, p1, d1) in zip(points, points[1:]):
+        elapsed = (t1 - t0) / 1000.0
+        if elapsed <= 0:
+            continue
+        if p1 >= p0:
+            package_delta = p1 - p0
+        else:
+            package_delta = (counter_max_joules - p0) + p1
+            package_wraps += 1
+        if d1 >= d0:
+            dram_delta = d1 - d0
+        else:
+            dram_delta = (counter_max_joules - d0) + d1
+            dram_wraps += 1
+        interval_energy = package_delta + dram_delta
+        if interval_energy < 0:
+            return result
+        package_energy += package_delta
+        dram_energy += dram_delta
+        powers.append(interval_energy / elapsed)
+
     duration = (points[-1][0] - points[0][0]) / 1000.0
-    energy = points[-1][1] - points[0][1]
-
-    powers = [
-        (e1 - e0) / ((t1 - t0) / 1000.0)
-        for (t0, e0), (t1, e1) in zip(points, points[1:])
-    ]
-
+    energy = package_energy + dram_energy
     result.update(
         energy_joules=energy,
-        average_power_watts=energy / duration,
+        average_power_watts=energy / duration if duration > 0 else None,
         duration_seconds=duration,
         samples=powers,
+        counter_wrap_count=package_wraps + dram_wraps,
+        package_counter_wrap_count=package_wraps,
+        dram_counter_wrap_count=dram_wraps,
     )
     return result
 
@@ -220,6 +250,79 @@ def append_result(path: Path, result):
         writer.writerow(result)
         handle.flush()
         os.fsync(handle.fileno())
+
+
+def read_completed_cooldown_events(path: Path):
+    if not path.exists():
+        return set()
+    with path.open(newline="", encoding="utf-8") as handle:
+        return {row["event_key"] for row in csv.DictReader(handle)}
+
+
+def append_cooldown_event(path: Path, event):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    exists = path.exists() and path.stat().st_size > 0
+    with path.open("a", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=COOLDOWN_EVENT_FIELDS)
+        if not exists:
+            writer.writeheader()
+        writer.writerow(event)
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def apply_boundary_cooldown(
+    row, all_rows, completed_runs, cooldown_path, completed_events, config, disabled
+):
+    """Apply the long cooldown immediately before a new measured phase/round."""
+    if disabled or row["phase"] != "measured" or int(row["order"]) != 1:
+        return
+
+    repetition = int(row["repetition"])
+    if repetition == 1:
+        prerequisite_ids = {
+            item["run_id"] for item in all_rows if item["phase"] == "warmup"
+        }
+        event_key = "post_warmup"
+        event_type = "post_warmup"
+        seconds = float(config["post_warmup_cooldown_seconds"])
+    else:
+        prerequisite_ids = {
+            item["run_id"]
+            for item in all_rows
+            if item["phase"] == "measured"
+            and int(item["repetition"]) == repetition - 1
+        }
+        event_key = f"between_round_{repetition - 1:02d}_{repetition:02d}"
+        event_type = "between_rounds"
+        seconds = float(config["between_round_cooldown_seconds"])
+
+    # Partial diagnostic selections do not trigger an official boundary pause.
+    if not prerequisite_ids or not prerequisite_ids.issubset(completed_runs):
+        return
+    if event_key in completed_events:
+        print(f"boundary cooldown already complete: {event_key}", flush=True)
+        return
+
+    started = datetime.now(timezone.utc).isoformat()
+    print(
+        f"boundary cooldown: {event_key} for {seconds:g}s before {row['run_id']}",
+        flush=True,
+    )
+    time.sleep(seconds)
+    append_cooldown_event(
+        cooldown_path,
+        {
+            "event_key": event_key,
+            "event_type": event_type,
+            "before_run_id": row["run_id"],
+            "before_repetition": repetition,
+            "configured_seconds": f"{seconds:g}",
+            "started_at_utc": started,
+            "completed_at_utc": datetime.now(timezone.utc).isoformat(),
+        },
+    )
+    completed_events.add(event_key)
 
 
 def relative(path: Path):
@@ -338,17 +441,22 @@ def run_one(row, subject, config, args, results_root):
     )
     workload_complete = "WORKLOAD_COMPLETE" in stdout_text
 
-    energy = read_energibridge(energibridge_csv) if not args.no_energibridge else {
+    energy = read_energibridge(
+        energibridge_csv, float(config["rapl_counter_max_joules"])
+    ) if not args.no_energibridge else {
         "energy_joules": None,
         "average_power_watts": None,
         "duration_seconds": None,
         "samples": [],
+        "counter_wrap_count": 0,
+        "package_counter_wrap_count": 0,
+        "dram_counter_wrap_count": 0,
     }
     power_samples = read_turbostat(turbostat_log) if not args.no_turbostat else []
     build_seconds = metadata.get("build_seconds")
     runtime_seconds = metadata.get("runtime_seconds")
     elapsed_parts = [value for value in (build_seconds, runtime_seconds) if value is not None]
-    execution_seconds = sum(elapsed_parts) if elapsed_parts else None
+    execution_seconds = sum(elapsed_parts) if runtime_seconds is not None else None
     energy_joules = energy["energy_joules"]
     average_power = (
         energy_joules / energy["duration_seconds"]
@@ -400,6 +508,9 @@ def run_one(row, subject, config, args, results_root):
         "execution_time_seconds": "" if execution_seconds is None else f"{execution_seconds:.9f}",
         "measurement_wall_seconds": f"{wall_seconds:.9f}",
         "total_energy_consumption_joules": "" if energy_joules is None else f"{energy_joules:.9f}",
+        "energy_counter_wrap_count": energy["counter_wrap_count"],
+        "package_energy_counter_wrap_count": energy["package_counter_wrap_count"],
+        "dram_energy_counter_wrap_count": energy["dram_counter_wrap_count"],
         "average_power_watts": "" if average_power is None else f"{average_power:.9f}",
         "peak_power_watts": "" if not power_samples else f"{max(power_samples):.9f}",
         "power_variability_watts": "" if len(power_samples) < 2 else f"{statistics.pstdev(power_samples):.9f}",
@@ -493,13 +604,26 @@ def main():
     selected = select_rows(rows, args)
     warmup_path = results_root / "raw" / "warmups.csv"
     measured_path = results_root / "raw" / "executions.csv"
+    cooldown_path = results_root / "cooldown_events.csv"
     completed = read_completed_run_ids([warmup_path, measured_path]) if args.resume else set()
-    if not args.resume and (warmup_path.exists() or measured_path.exists()):
+    completed_events = read_completed_cooldown_events(cooldown_path) if args.resume else set()
+    if not args.resume and (
+        warmup_path.exists() or measured_path.exists() or cooldown_path.exists()
+    ):
         raise SystemExit("result CSV already exists; use --resume or archive results first")
     pending = [row for row in selected if row["run_id"] not in completed]
     print(f"selected: {len(selected)}; already complete: {len(selected) - len(pending)}; pending: {len(pending)}")
 
     for index, row in enumerate(pending, 1):
+        apply_boundary_cooldown(
+            row,
+            rows,
+            completed,
+            cooldown_path,
+            completed_events,
+            config,
+            args.no_cooldown,
+        )
         subject = subjects[row["subject_id"]]
         print(
             f"[{index}/{len(pending)}] {row['phase']} r={row['repetition']} "
@@ -509,6 +633,7 @@ def main():
         result = run_one(row, subject, config, args, results_root)
         target = warmup_path if row["phase"] == "warmup" else measured_path
         append_result(target, result)
+        completed.add(row["run_id"])
         if not args.no_cooldown:
             time.sleep(float(row["cooldown_seconds"]))
 

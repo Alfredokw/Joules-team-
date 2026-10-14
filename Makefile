@@ -1,4 +1,4 @@
-.PHONY: preflight static-check workload-precheck build baseline asan msan tsan validate validate-detectors schedule smoke run resume audit process clean zip
+.PHONY: preflight static-check workload-precheck build baseline asan msan tsan validate validate-detectors schedule smoke run resume audit process finalize clean zip
 
 preflight:
 	python3 scripts/preflight.py
@@ -47,6 +47,8 @@ audit:
 
 process:
 	python3 scripts/process_results.py
+
+finalize: audit process
 
 clean:
 	@if [ -d bin ]; then find bin -depth -mindepth 1 -delete; fi

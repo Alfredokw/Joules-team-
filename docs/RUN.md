@@ -13,11 +13,22 @@ campaign only after preflight and validation have passed:
 python3 scripts/run_experiment.py
 ```
 
+Each condition is compiled and executed inside the same measurement window, so
+compilation contributes to both elapsed time and energy.
+
+The runner keeps the existing one-second Juliet and two-second application
+cooldowns after every execution. It then waits an additional 120 seconds after
+all warm-ups and 300 seconds between consecutive measured rounds. Completed
+long pauses are logged to `results/cooldown_events.csv`.
+
 Resume safely after an interruption:
 
 ```sh
 python3 scripts/run_experiment.py --resume
 ```
+
+On resume, a completed long pause is not repeated. If interruption occurs
+during a long pause, the entire pause is conservatively restarted.
 
 Useful diagnostic subsets write to a separate results directory. For example:
 
@@ -35,9 +46,11 @@ default results directory for every part of the measured campaign.
 After completion:
 
 ```sh
-python3 scripts/audit_results.py
-python3 scripts/process_results.py
+make finalize
 ```
 
 Raw measurements remain authoritative. The processed CSV only adds overhead
-factors to valid Baseline/sanitizer pairs.
+factors to valid Baseline/sanitizer pairs. In a new package, `results/raw/`,
+`results/runs/`, and `results/processed/` contain no experiment output yet:
+the runner creates and populates the first two during execution, and
+`make finalize` creates the processed CSV after all runs are present.

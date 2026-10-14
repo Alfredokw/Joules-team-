@@ -103,14 +103,29 @@ def validate_static(report, errors):
             errors.append(f"wrong workload sizes for {subject['id']}: {actual} != {expected}")
     if config["repetitions"] != 30:
         errors.append("the frozen protocol requires 30 repetitions")
+    if config.get("measurement_scope") != "build_and_run":
+        errors.append("measurement_scope must be build_and_run")
     if len(config["round_seeds"]) != 30 or len(set(config["round_seeds"])) != 30:
         errors.append("round_seeds must contain 30 distinct predefined seeds")
     if config["configurations"] != ["baseline", "asan", "msan", "tsan", "memcheck"]:
         errors.append("unexpected sanitizer configuration list")
     if config["workloads"] != ["small", "large"]:
         errors.append("unexpected workload list")
+    if config.get("post_warmup_cooldown_seconds") != 120:
+        errors.append("post_warmup_cooldown_seconds must be 120")
+    if config.get("between_round_cooldown_seconds") != 300:
+        errors.append("between_round_cooldown_seconds must be 300")
+    if config.get("rapl_counter_max_joules") != 262144.0:
+        errors.append("rapl_counter_max_joules must be 262144.0 for the target server")
     report["protocol_version"] = config["protocol_version"]
     report["measurement_scope"] = config["measurement_scope"]
+    report["post_warmup_cooldown_seconds"] = config.get(
+        "post_warmup_cooldown_seconds"
+    )
+    report["between_round_cooldown_seconds"] = config.get(
+        "between_round_cooldown_seconds"
+    )
+    report["rapl_counter_max_joules"] = config.get("rapl_counter_max_joules")
 
 
 def main():
@@ -142,6 +157,7 @@ def main():
     hardware_issues = []
     if "Xeon Silver 4208" not in cpu["model"].replace("(R)", ""):
         hardware_issues.append(f"unexpected CPU model: {cpu['model']}")
+
     if cpu["physical_packages"] != 2:
         hardware_issues.append(f"expected 2 physical CPU packages, found {cpu['physical_packages']}")
     if memory < 350 * 1024**3:
@@ -172,8 +188,23 @@ def main():
             versions[name] = command_version(command)
     report["tool_versions"] = versions
 
-    if not any(Path("/sys/class/powercap").glob("intel-rapl*")):
+    rapl_entries = list(Path("/sys/class/powercap").glob("intel-rapl*"))
+    if not rapl_entries:
         warnings.append("no intel-rapl entries found under /sys/class/powercap")
+    rapl_ranges = []
+    for path in Path("/sys/class/powercap").glob(
+        "intel-rapl*/**/max_energy_range_uj"
+    ):
+        try:
+            rapl_ranges.append(int(path.read_text().strip()) / 1_000_000.0)
+        except (OSError, ValueError):
+            warnings.append(f"could not read RAPL counter range: {path}")
+    report["rapl_counter_ranges_joules"] = sorted(set(rapl_ranges))
+    configured_range = float(config["rapl_counter_max_joules"])
+    if rapl_ranges and any(abs(value - configured_range) > 1.0 for value in rapl_ranges):
+        errors.append(
+            "configured RAPL counter range does not match max_energy_range_uj"
+        )
     msr_files = list(Path("/dev/cpu").glob("*/msr")) if Path("/dev/cpu").exists() else []
     if not msr_files or not all(os.access(path, os.R_OK) for path in msr_files):
         errors.append("MSR files are missing or unreadable; configure EnergiBridge/turbostat permissions")
@@ -200,7 +231,9 @@ def main():
             timeout=20,
             check=False,
         )
-        energy_data = read_energibridge(energy_csv)
+        energy_data = read_energibridge(
+            energy_csv, float(config["rapl_counter_max_joules"])
+        )
         energy_ok = (
             energy_run.returncode == 0
             and energy_data["energy_joules"] is not None

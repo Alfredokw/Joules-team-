@@ -17,6 +17,9 @@ Green Lab report. It is not the macOS calibration package.
 * Four worker threads where the workload implementation uses threads.
 * Cooldown after every run: one second for Juliet and two seconds for the
   application variants.
+* Additional cooldown after all 240 warm-ups: two minutes.
+* Additional cooldown between measured rounds: five minutes between each pair
+  of consecutive rounds (29 pauses; no extra pause after round 30).
 
 | Workload implementation | Small | Large |
 |---|---:|---:|
@@ -25,11 +28,12 @@ Green Lab report. It is not the macOS calibration package.
 | Parallel Matrix Multiplication | 128 | 608 |
 | Juliet | 1,000,000 | 26,000,000 |
 
-The default `measurement_scope` is `build_and_run`, matching the supplied
-paper: every scheduled condition compiles the selected configuration and then
-executes it inside the same EnergiBridge/Turbostat measurement window. The
-runner also records build time and runtime separately. Do not change this
-setting after beginning the measured campaign.
+The frozen `measurement_scope` is `build_and_run`: every scheduled condition
+compiles the selected configuration and then executes it inside the same
+EnergiBridge/Turbostat measurement window. Compilation is therefore included
+in both `execution_time_seconds` and total energy. Build time and runtime are
+also recorded separately. Do not change this setting after beginning the
+measured campaign.
 
 ## Metrics
 
@@ -42,6 +46,11 @@ run and records:
 * peak resident memory in bytes for the executed workload/tool process;
 * termination status, workload-completion marker, and detection outcome;
 * complete compiler and runtime commands.
+
+Total energy is calculated from the cumulative package and DRAM RAPL counters.
+If either counter wraps to zero, the runner corrects the overflow using the
+server's 262,144 J counter range and records the correction count in the master
+CSV.
 
 Only runs containing `WORKLOAD_COMPLETE` are eligible for overhead analysis.
 The injected error is triggered after the common useful workload so that a
@@ -60,8 +69,7 @@ make workload-precheck
 make schedule
 make smoke
 make run
-make audit
-make process
+make finalize
 ```
 
 If the campaign is interrupted, do not restart it from zero:
@@ -70,9 +78,12 @@ If the campaign is interrupted, do not restart it from zero:
 make resume
 ```
 
-The runner appends and flushes one result row after every execution. Raw results
-are stored under `results/raw/`, per-run logs under `results/runs/`, and paired
-overhead factors under `results/processed/`.
+The runner creates `results/raw/` and `results/runs/` on demand, then appends and
+flushes one result row after every execution. These directories are empty in a
+clean replication package. After the campaign, `make finalize` audits the raw
+data and creates paired overhead factors under `results/processed/`. Completed
+long pauses are recorded in `results/cooldown_events.csv` so that `--resume`
+does not repeat them.
 
 ## Important rules
 
