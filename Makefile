@@ -1,4 +1,4 @@
-.PHONY: preflight static-check workload-precheck build baseline asan msan tsan validate validate-detectors schedule smoke run resume audit process finalize clean zip
+.PHONY: preflight static-check workload-precheck build baseline asan msan tsan validate validate-detectors schedule smoke run resume audit process clean zip
 
 preflight:
 	python3 scripts/preflight.py
