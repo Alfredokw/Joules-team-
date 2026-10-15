@@ -1,0 +1,25 @@
+==3770452== Memcheck, a memory error detector
+==3770452== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3770452== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3770452== Command: /home/gl_joulesteam/Joules-team-/Experiment_result_round_cooldowns/runs/r27_o015_juliet_oob_heap_loop_small_memcheck/program --size small --threads 4 --seed 20261002
+==3770452== 
+==3770452== Invalid read of size 1
+==3770452==    at 0x1096D2: trigger (heap_loop_overread.c:15)
+==3770452==    by 0x1095A7: run_juliet_case (juliet_driver.h:22)
+==3770452==    by 0x1095A7: main (heap_loop_overread.c:19)
+==3770452==  Address 0x521c08a is 0 bytes after a block of size 10 alloc'd
+==3770452==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3770452==    by 0x109691: xmalloc (bench.h:35)
+==3770452==    by 0x109691: trigger (heap_loop_overread.c:12)
+==3770452==    by 0x1095A7: run_juliet_case (juliet_driver.h:22)
+==3770452==    by 0x1095A7: main (heap_loop_overread.c:19)
+==3770452== 
+==3770452== 
+==3770452== HEAP SUMMARY:
+==3770452==     in use at exit: 0 bytes in 0 blocks
+==3770452==   total heap usage: 3 allocs, 3 frees, 8,004,106 bytes allocated
+==3770452== 
+==3770452== All heap blocks were freed -- no leaks are possible
+==3770452== 
+==3770452== For lists of detected and suppressed errors, rerun with: -s
+==3770452== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

@@ -1,0 +1,24 @@
+==3657240== Memcheck, a memory error detector
+==3657240== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3657240== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3657240== Command: /home/gl_joulesteam/Joules-team-/Experiment_result_round_cooldowns/runs/r12_o223_hash_oob_small_memcheck/program --size small --threads 4 --seed 20261002
+==3657240== 
+==3657240== Invalid read of size 8
+==3657240==    at 0x109D44: inject (out_of_bounds.c:13)
+==3657240==    by 0x109B1A: run_hash (hash_core.h:65)
+==3657240==    by 0x109B1A: main (out_of_bounds.c:17)
+==3657240==  Address 0x54614c0 is 0 bytes after a block of size 2,000,000 alloc'd
+==3657240==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3657240==    by 0x1098FA: xmalloc (bench.h:35)
+==3657240==    by 0x1098FA: run_hash (hash_core.h:45)
+==3657240==    by 0x1098FA: main (out_of_bounds.c:17)
+==3657240== 
+==3657240== 
+==3657240== HEAP SUMMARY:
+==3657240==     in use at exit: 0 bytes in 0 blocks
+==3657240==   total heap usage: 50,019 allocs, 50,019 frees, 6,129,216 bytes allocated
+==3657240== 
+==3657240== All heap blocks were freed -- no leaks are possible
+==3657240== 
+==3657240== For lists of detected and suppressed errors, rerun with: -s
+==3657240== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

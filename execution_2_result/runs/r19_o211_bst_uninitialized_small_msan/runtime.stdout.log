@@ -1,0 +1,2 @@
+WORKLOAD_COMPLETE program=bst variant=uninitialized_memory size=small n=10000 threads=4 seed=20261002 checksum=25000
+ERROR_TRIGGER value=0

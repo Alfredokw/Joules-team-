@@ -1,0 +1,1 @@
+WORKLOAD_COMPLETE program=bst variant=lifetime_deallocation size=large n=120000 threads=4 seed=20261002 checksum=300000

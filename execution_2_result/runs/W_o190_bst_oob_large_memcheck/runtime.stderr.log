@@ -1,0 +1,24 @@
+==3559931== Memcheck, a memory error detector
+==3559931== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3559931== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3559931== Command: /home/gl_joulesteam/Joules-team-/Experiment_result_round_cooldowns/runs/W_o190_bst_oob_large_memcheck/program --size large --threads 4 --seed 20261002
+==3559931== 
+==3559931== Invalid read of size 8
+==3559931==    at 0x10988C: inject (out_of_bounds.c:13)
+==3559931==    by 0x10976A: run_bst (bst_core.h:63)
+==3559931==    by 0x10976A: main (out_of_bounds.c:16)
+==3559931==  Address 0x670ce40 is 0 bytes after a block of size 4,800,000 alloc'd
+==3559931==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3559931==    by 0x109549: xmalloc (bench.h:35)
+==3559931==    by 0x109549: run_bst (bst_core.h:43)
+==3559931==    by 0x109549: main (out_of_bounds.c:16)
+==3559931== 
+==3559931== 
+==3559931== HEAP SUMMARY:
+==3559931==     in use at exit: 0 bytes in 0 blocks
+==3559931==   total heap usage: 240,008 allocs, 240,008 frees, 9,605,376 bytes allocated
+==3559931== 
+==3559931== All heap blocks were freed -- no leaks are possible
+==3559931== 
+==3559931== For lists of detected and suppressed errors, rerun with: -s
+==3559931== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

@@ -1,0 +1,72 @@
+==3674953== Memcheck, a memory error detector
+==3674953== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3674953== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3674953== Command: /home/gl_joulesteam/Joules-team-/Experiment_result_round_cooldowns/runs/r15_o034_juliet_uninit_heap_array_large_memcheck/program --size large --threads 4 --seed 20261002
+==3674953== 
+==3674953== Conditional jump or move depends on uninitialised value(s)
+==3674953==    at 0x48CD0CB: __printf_buffer (vfprintf-process-arg.c:58)
+==3674953==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3674953==    by 0x48C31B2: printf (printf.c:33)
+==3674953==    by 0x109787: trigger (heap_array_no_init.c:12)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953==  Uninitialised value was created by a heap allocation
+==3674953==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3674953==    by 0x10976A: xmalloc (bench.h:35)
+==3674953==    by 0x10976A: trigger (heap_array_no_init.c:11)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953== 
+==3674953== Use of uninitialised value of size 8
+==3674953==    at 0x48C20BB: _itoa_word (_itoa.c:183)
+==3674953==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3674953==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3674953==    by 0x48C31B2: printf (printf.c:33)
+==3674953==    by 0x109787: trigger (heap_array_no_init.c:12)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953==  Uninitialised value was created by a heap allocation
+==3674953==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3674953==    by 0x10976A: xmalloc (bench.h:35)
+==3674953==    by 0x10976A: trigger (heap_array_no_init.c:11)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953== 
+==3674953== Conditional jump or move depends on uninitialised value(s)
+==3674953==    at 0x48C20CC: _itoa_word (_itoa.c:183)
+==3674953==    by 0x48CCC9B: __printf_buffer (vfprintf-process-arg.c:155)
+==3674953==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3674953==    by 0x48C31B2: printf (printf.c:33)
+==3674953==    by 0x109787: trigger (heap_array_no_init.c:12)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953==  Uninitialised value was created by a heap allocation
+==3674953==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3674953==    by 0x10976A: xmalloc (bench.h:35)
+==3674953==    by 0x10976A: trigger (heap_array_no_init.c:11)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953== 
+==3674953== Conditional jump or move depends on uninitialised value(s)
+==3674953==    at 0x48CCD85: __printf_buffer (vfprintf-process-arg.c:186)
+==3674953==    by 0x48CE73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==3674953==    by 0x48C31B2: printf (printf.c:33)
+==3674953==    by 0x109787: trigger (heap_array_no_init.c:12)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953==  Uninitialised value was created by a heap allocation
+==3674953==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3674953==    by 0x10976A: xmalloc (bench.h:35)
+==3674953==    by 0x10976A: trigger (heap_array_no_init.c:11)
+==3674953==    by 0x1095E9: run_juliet_case (juliet_driver.h:22)
+==3674953==    by 0x1095E9: main (heap_array_no_init.c:16)
+==3674953== 
+==3674953== 
+==3674953== HEAP SUMMARY:
+==3674953==     in use at exit: 0 bytes in 0 blocks
+==3674953==   total heap usage: 3 allocs, 3 frees, 209,044,096 bytes allocated
+==3674953== 
+==3674953== All heap blocks were freed -- no leaks are possible
+==3674953== 
+==3674953== For lists of detected and suppressed errors, rerun with: -s
+==3674953== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

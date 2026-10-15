@@ -1,0 +1,26 @@
+==3765348== Memcheck, a memory error detector
+==3765348== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3765348== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3765348== Command: /home/gl_joulesteam/Joules-team-/Experiment_result_round_cooldowns/runs/r26_o105_juliet_lifetime_char_leak_large_memcheck/program --size large --threads 4 --seed 20261002
+==3765348== 
+==3765348== 
+==3765348== HEAP SUMMARY:
+==3765348==     in use at exit: 260,000 bytes in 1 blocks
+==3765348==   total heap usage: 3 allocs, 2 frees, 208,264,096 bytes allocated
+==3765348== 
+==3765348== 260,000 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==3765348==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3765348==    by 0x109775: xmalloc (bench.h:35)
+==3765348==    by 0x109775: trigger (char_memory_leak.c:12)
+==3765348==    by 0x1095F9: run_juliet_case (juliet_driver.h:22)
+==3765348==    by 0x1095F9: main (char_memory_leak.c:18)
+==3765348== 
+==3765348== LEAK SUMMARY:
+==3765348==    definitely lost: 260,000 bytes in 1 blocks
+==3765348==    indirectly lost: 0 bytes in 0 blocks
+==3765348==      possibly lost: 0 bytes in 0 blocks
+==3765348==    still reachable: 0 bytes in 0 blocks
+==3765348==         suppressed: 0 bytes in 0 blocks
+==3765348== 
+==3765348== For lists of detected and suppressed errors, rerun with: -s
+==3765348== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

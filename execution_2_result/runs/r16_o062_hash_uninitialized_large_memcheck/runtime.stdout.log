@@ -1,0 +1,2 @@
+WORKLOAD_COMPLETE program=hash_table variant=uninitialized_memory size=large n=300000 threads=4 seed=20261002 checksum=17281346343077031291
+ERROR_TRIGGER value=0

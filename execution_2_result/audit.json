@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "scheduled_rows": 7440,
+  "warmup_rows": 240,
+  "measured_rows": 7200,
+  "invalid_rows": 0,
+  "missing_metric_rows": 0,
+  "corrected_energy_counter_wraps": 2,
+  "boundary_cooldown_events": 30,
+  "expected_boundary_cooldown_events": 30,
+  "termination_status": {
+    "completed": 7200
+  },
+  "detections_by_configuration": {
+    "asan": 660,
+    "memcheck": 960,
+    "tsan": 480,
+    "msan": 360
+  },
+  "errors": []
+}

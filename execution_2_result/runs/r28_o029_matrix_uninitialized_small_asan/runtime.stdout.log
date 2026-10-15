@@ -1,0 +1,2 @@
+WORKLOAD_COMPLETE program=parallel_matrix variant=uninitialized_memory size=small n=128 threads=4 seed=20261002 checksum=5635710613132554540
+ERROR_TRIGGER value=-0.000002

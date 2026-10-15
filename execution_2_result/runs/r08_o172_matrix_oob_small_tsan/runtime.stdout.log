@@ -1,0 +1,1 @@
+WORKLOAD_COMPLETE program=parallel_matrix variant=out_of_bounds size=small n=128 threads=4 seed=20261002 checksum=5635710613132554540
