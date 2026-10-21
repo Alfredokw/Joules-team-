@@ -1,0 +1,193 @@
+group,group_label,subject_id,family,workload,configuration,energy_overhead,buildrun_time_overhead,runtime_only_overhead
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,small,asan,2.719263515327419,3.31474600607815,17.019676679229164
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,small,memcheck,5.147555103973057,6.882419310312523,59.636109674163016
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,small,msan,1.7185538087385523,1.9475158007747748,2.731364741309466
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,small,tsan,1.780158865483314,2.0419709285926326,4.840431200361782
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,large,asan,2.016902635351852,2.1059317794568173,2.223154428498047
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,large,memcheck,18.332479670727317,20.337508731821092,27.462787929144426
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,large,msan,2.1460079531619014,2.27965957563932,2.4347993965964227
+juliet,Juliet,juliet_lifetime_char_leak,lifetime/deallocation,large,tsan,2.9173245302740054,3.0053738822204483,3.4746221206845824
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,small,asan,2.716551194771088,3.330126350624218,17.15153156459541
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,small,memcheck,5.113643697990081,6.844054612118973,59.31725581470051
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,small,msan,1.7116365689795991,1.9554595515871118,2.7424731480689344
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,small,tsan,1.7924866715577663,2.052158610719074,4.909832011841351
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,large,asan,2.0074832944333574,2.1318033452644074,2.2602202528515543
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,large,memcheck,18.652993914248178,20.584726295696303,27.875608331979794
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,large,msan,2.198292804695849,2.301769040174982,2.4653942282303007
+juliet,Juliet,juliet_lifetime_int64_leak,lifetime/deallocation,large,tsan,2.855296305311132,3.054898421053749,3.5468147904735776
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,small,asan,2.7294483183681435,3.3410973536987023,17.259486597949763
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,small,memcheck,5.194819270025756,6.928491145765728,59.8653051255828
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,small,msan,1.6963878601355602,1.916179127229769,2.7527247823422947
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,small,tsan,2.9133540209758038,3.608760018534218,20.27983922705291
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,large,asan,2.0320311939108517,2.1358495129391417,2.2669845438295484
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,large,memcheck,18.509249847262897,20.5987423535964,27.861646682709576
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,large,msan,2.2141127888796563,2.29675573434758,2.474738076680999
+juliet,Juliet,juliet_lifetime_uaf,lifetime/deallocation,large,tsan,3.4977914301217834,3.638101345549547,4.342776359506547
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,small,asan,2.6790583493909974,3.3118479795136033,17.003165200762737
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,small,memcheck,5.0400931673887,6.7585116482509155,58.10727964032308
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,small,msan,1.648726299334524,1.9071525856114568,2.709761556940128
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,small,tsan,1.7547574959510635,2.0414831500664197,4.810593858528993
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,large,asan,2.0164474790925073,2.1187356198850344,2.2482406390905894
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,large,memcheck,18.252069422692756,20.35894999439113,27.594940598049437
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,large,msan,2.178413272116752,2.2853930307101447,2.4606034291750367
+juliet,Juliet,juliet_oob_heap_loop,out-of-bounds access,large,tsan,2.8474910584547333,3.0410148406499067,3.5299834372196637
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,small,asan,2.7494843780647074,3.3379807053683748,17.009396948887602
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,small,memcheck,5.089932308747765,6.865091489005241,58.66979966480594
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,small,msan,1.6979805082483728,1.909536631831179,2.7514961798663466
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,small,tsan,1.7737574794600617,2.045879733687845,4.772937174009204
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,large,asan,2.0349454474441493,2.1046998975032625,2.2235226758967284
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,large,memcheck,18.78020739065778,20.365112443686172,27.48400629800681
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,large,msan,2.1911322144084546,2.2803716798641966,2.451993396618986
+juliet,Juliet,juliet_oob_heap_memcpy,out-of-bounds access,large,tsan,2.8736606350806917,3.0435307021956115,3.5255388143913677
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,small,asan,2.7357760474149937,3.3247676609223187,17.195495426546156
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,small,memcheck,5.1151460776288324,6.907975607651494,59.95478861402441
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,small,msan,1.6977756111102997,1.9129009007490265,2.777733290887827
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,small,tsan,1.7852436428334817,2.0455425562854432,4.846298087115858
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,large,asan,2.046196135278399,2.112106062923399,2.232961620544179
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,large,memcheck,18.763341668260555,20.351734592014793,27.488622471491283
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,large,msan,2.207045710662124,2.284283694448497,2.457429255441349
+juliet,Juliet,juliet_oob_stack_loop,out-of-bounds access,large,tsan,2.8826269399196076,3.050912826144029,3.5361789082156676
+juliet,Juliet,juliet_race_byref,data race,small,asan,1.6264841212095797,1.8059804992683406,1.881924559063609
+juliet,Juliet,juliet_race_byref,data race,small,memcheck,6.052083266820132,7.9942747674379095,54.904441621038345
+juliet,Juliet,juliet_race_byref,data race,small,msan,1.846947734514515,2.1254055335376596,3.766864383276519
+juliet,Juliet,juliet_race_byref,data race,small,tsan,2.8105524277272864,3.4686761296822946,15.152066871309204
+juliet,Juliet,juliet_race_byref,data race,large,asan,1.4965591256495359,1.5355060738091775,1.4651715744000993
+juliet,Juliet,juliet_race_byref,data race,large,memcheck,17.400392688775636,18.9373439654946,23.935417369704812
+juliet,Juliet,juliet_race_byref,data race,large,msan,2.9257621570969397,3.0796980931945583,3.4169810722740728
+juliet,Juliet,juliet_race_byref,data race,large,tsan,3.047387023854975,3.1891167354826675,3.5991060222814615
+juliet,Juliet,juliet_race_control,data race,small,asan,1.5993118871156864,1.8331927772970433,2.1686133008078117
+juliet,Juliet,juliet_race_control,data race,small,memcheck,5.686487681744784,7.862927277571556,69.54325149292153
+juliet,Juliet,juliet_race_control,data race,small,msan,1.7086198315338734,1.9645945305520123,2.7789867017332224
+juliet,Juliet,juliet_race_control,data race,small,tsan,2.80535621378413,3.54862053352541,19.840323979176606
+juliet,Juliet,juliet_race_control,data race,large,asan,1.5918127456894764,1.6513617296573861,1.5959261385618628
+juliet,Juliet,juliet_race_control,data race,large,memcheck,18.865697679017146,20.793569416599414,28.300549990528985
+juliet,Juliet,juliet_race_control,data race,large,msan,2.1852548345771146,2.3010667988418514,2.465387013132817
+juliet,Juliet,juliet_race_control,data race,large,tsan,3.4425081122045604,3.626226423923477,4.344852164780356
+juliet,Juliet,juliet_race_global,data race,small,asan,1.6087790568959566,1.8285324838728976,2.163807560896452
+juliet,Juliet,juliet_race_global,data race,small,memcheck,5.820892334891071,7.914049173872856,70.2391396900541
+juliet,Juliet,juliet_race_global,data race,small,msan,1.7000109671398684,1.95525884923954,2.8039055794151424
+juliet,Juliet,juliet_race_global,data race,small,tsan,2.829446685053869,3.5607136036306324,20.112475036805055
+juliet,Juliet,juliet_race_global,data race,large,asan,1.5513742622972622,1.6362928749489623,1.5783438065245592
+juliet,Juliet,juliet_race_global,data race,large,memcheck,18.718915865758877,20.748903765121497,28.19045280047949
+juliet,Juliet,juliet_race_global,data race,large,msan,2.213317132929272,2.2952740602194144,2.4592133142575503
+juliet,Juliet,juliet_race_global,data race,large,tsan,3.300027159745076,3.610823073160215,4.320579531025802
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,small,asan,1.605421029429829,1.8219034039351198,2.1205628531117324
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,small,memcheck,5.080165776621339,6.842749031299998,59.309180678648985
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,small,msan,2.801729182516682,3.476162419676525,18.005991566706236
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,small,tsan,1.7684160684606287,2.0564722576024144,4.950164328855996
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,large,asan,1.5812654230749466,1.612118919050757,1.5473774040145907
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,large,memcheck,19.060933712525003,20.517850168024815,27.78646985601229
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,large,msan,2.7638039199133804,2.864434029147003,3.2388274813703157
+juliet,Juliet,juliet_uninit_heap_array,uninitialized memory,large,tsan,2.854308743212191,3.0443123730590327,3.532858920863334
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,small,asan,1.601747353853545,1.8220507680580726,2.1502789549296852
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,small,memcheck,5.025928646218545,6.740495384789541,58.971553235095094
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,small,msan,2.78322627486369,3.4520498251226943,17.894656749973585
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,small,tsan,1.754614180802588,2.03722227062722,4.856870361729399
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,large,asan,1.6037144475821097,1.6444786153290987,1.592758638674105
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,large,memcheck,18.871734870025602,20.55660765155128,28.007090169038477
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,large,msan,2.7423424148837947,2.893459902091159,3.2867427007386336
+juliet,Juliet,juliet_uninit_partial_int,uninitialized memory,large,tsan,2.9555558866348095,3.0420979994161104,3.544466770997817
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,small,asan,1.5986989604212922,1.8138373510397738,2.1333915829014933
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,small,memcheck,5.065835256023339,6.7882864504360425,59.023329381500105
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,small,msan,2.763884140484567,3.4345720002734326,17.626036687502282
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,small,tsan,1.7516564855794698,2.0344532223745566,4.85826105876838
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,large,asan,1.5895507405235918,1.62315682716012,1.5636978707548528
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,large,memcheck,18.331452995112162,20.36859909317531,27.653977683784056
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,large,msan,2.7369284777094776,2.8590680529812293,3.2330747358323846
+juliet,Juliet,juliet_uninit_partial_struct,uninitialized memory,large,tsan,2.9232086479517996,3.047134305420415,3.546032340558479
+derived,Derived,bst_lifetime,lifetime/deallocation,small,asan,2.369254297939972,2.7527788752947533,27.122267707225262
+derived,Derived,bst_lifetime,lifetime/deallocation,small,memcheck,5.516857351618491,6.855406007200745,135.95513292494638
+derived,Derived,bst_lifetime,lifetime/deallocation,small,msan,1.6862516274507102,1.859785149748049,3.3179459753004426
+derived,Derived,bst_lifetime,lifetime/deallocation,small,tsan,2.3173657962542515,2.6823559772555967,28.96291328391154
+derived,Derived,bst_lifetime,lifetime/deallocation,large,asan,2.5570734807697026,2.7831443845958566,4.5078962771021
+derived,Derived,bst_lifetime,lifetime/deallocation,large,memcheck,13.28385490291843,15.79813400850194,38.2439370664879
+derived,Derived,bst_lifetime,lifetime/deallocation,large,msan,2.0820330161968634,2.2520252086626975,2.945597222733935
+derived,Derived,bst_lifetime,lifetime/deallocation,large,tsan,2.590416903998385,2.811511885661266,4.815114578703991
+derived,Derived,bst_oob,out-of-bounds access,small,asan,2.3978040016334923,2.753557695444887,26.882582575194924
+derived,Derived,bst_oob,out-of-bounds access,small,memcheck,5.669396626739433,6.839607244359219,134.3061143301807
+derived,Derived,bst_oob,out-of-bounds access,small,msan,1.7083110970772608,1.8578986127203954,3.335024158644464
+derived,Derived,bst_oob,out-of-bounds access,small,tsan,1.5241762257946907,1.6359059634614863,4.8368230025441
+derived,Derived,bst_oob,out-of-bounds access,large,asan,2.5379423963719585,2.7702397331727076,4.447681782535538
+derived,Derived,bst_oob,out-of-bounds access,large,memcheck,13.301135965417481,15.741277481316585,37.75139382306762
+derived,Derived,bst_oob,out-of-bounds access,large,msan,2.0566307626218827,2.2428793644697302,2.9118827373460072
+derived,Derived,bst_oob,out-of-bounds access,large,tsan,1.96883553509025,2.110189775748462,3.032675242991525
+derived,Derived,bst_race,data race,small,asan,1.5937321752262703,1.7362193735778912,3.867532266128496
+derived,Derived,bst_race,data race,small,memcheck,5.425214748913748,6.816326262406988,135.5823275182601
+derived,Derived,bst_race,data race,small,msan,1.726561936079954,1.8932652866079978,3.29860680615549
+derived,Derived,bst_race,data race,small,tsan,2.2890050299434,2.6365160005427275,28.22897215143125
+derived,Derived,bst_race,data race,large,asan,1.9460502425927113,2.107911342858623,2.8247124100665015
+derived,Derived,bst_race,data race,large,memcheck,13.078443793390608,15.525660369048037,37.692600257342534
+derived,Derived,bst_race,data race,large,msan,2.0551841228017684,2.251138083795845,2.8980776754866535
+derived,Derived,bst_race,data race,large,tsan,2.5223412895666715,2.745560704644616,4.675716115434822
+derived,Derived,bst_uninitialized,uninitialized memory,small,asan,1.601314490051946,1.7426768506226218,3.956127395251406
+derived,Derived,bst_uninitialized,uninitialized memory,small,memcheck,5.487874644488562,6.844680356975279,139.03046993564675
+derived,Derived,bst_uninitialized,uninitialized memory,small,msan,2.4929951532495376,2.875816909753456,27.37121581940734
+derived,Derived,bst_uninitialized,uninitialized memory,small,tsan,1.5071334409923545,1.6351795464525551,4.9271420404886825
+derived,Derived,bst_uninitialized,uninitialized memory,large,asan,1.9575921293330953,2.105781586536481,2.802382478291673
+derived,Derived,bst_uninitialized,uninitialized memory,large,memcheck,13.359565378557248,15.755363423375877,38.063972241530635
+derived,Derived,bst_uninitialized,uninitialized memory,large,msan,2.6893186043829744,2.9409955423766867,4.677686593546439
+derived,Derived,bst_uninitialized,uninitialized memory,large,tsan,1.9891830528433163,2.1086404005179613,3.047939045886771
+derived,Derived,hash_lifetime,lifetime/deallocation,small,asan,2.5722300715602557,2.9435618922998144,12.86712395145872
+derived,Derived,hash_lifetime,lifetime/deallocation,small,memcheck,5.7819872142095186,7.030639796278814,64.77475646725567
+derived,Derived,hash_lifetime,lifetime/deallocation,small,msan,2.1896161318269654,2.455042551855313,3.2423129183771953
+derived,Derived,hash_lifetime,lifetime/deallocation,small,tsan,1.7675969694691096,1.9492528184025446,6.1351218225609
+derived,Derived,hash_lifetime,lifetime/deallocation,large,asan,2.492640650144393,2.7250694363453642,3.7643856000557396
+derived,Derived,hash_lifetime,lifetime/deallocation,large,memcheck,8.975749521008485,10.518512625476188,22.67539712185868
+derived,Derived,hash_lifetime,lifetime/deallocation,large,msan,2.4945938507954066,2.727215737795954,3.1690758874244884
+derived,Derived,hash_lifetime,lifetime/deallocation,large,tsan,2.786862208788939,3.00800719815206,4.922926523818933
+derived,Derived,hash_oob,out-of-bounds access,small,asan,2.586306725440248,2.950241657363476,13.220692328771706
+derived,Derived,hash_oob,out-of-bounds access,small,memcheck,5.735099139089582,7.096822568636318,65.4301017792336
+derived,Derived,hash_oob,out-of-bounds access,small,msan,2.197778003880772,2.454338867175343,3.26458735026586
+derived,Derived,hash_oob,out-of-bounds access,small,tsan,1.7962817195609913,1.9647327622636401,6.229558159341736
+derived,Derived,hash_oob,out-of-bounds access,large,asan,2.5232607982635615,2.723878714657772,3.7833262889969115
+derived,Derived,hash_oob,out-of-bounds access,large,memcheck,8.7467995785129,10.177129152598841,21.64758049276986
+derived,Derived,hash_oob,out-of-bounds access,large,msan,2.4912796663379844,2.718752983173991,3.145479978564148
+derived,Derived,hash_oob,out-of-bounds access,large,tsan,2.7987320699977536,3.0288564405059635,4.916082845708955
+derived,Derived,hash_race,data race,small,asan,1.8175298630175287,1.990894855523574,2.721496364025426
+derived,Derived,hash_race,data race,small,memcheck,5.613440758609688,7.009061099332897,65.44959615215855
+derived,Derived,hash_race,data race,small,msan,2.202688268912286,2.4563280601633295,3.19721430583515
+derived,Derived,hash_race,data race,small,tsan,2.567828423548574,2.9427077733791984,16.8672330333654
+derived,Derived,hash_race,data race,large,asan,1.968624338897662,2.091077588229722,2.31758552601241
+derived,Derived,hash_race,data race,large,memcheck,8.906540285082256,10.301683286911224,22.264193721008095
+derived,Derived,hash_race,data race,large,msan,2.499165530367213,2.7027059336576285,3.122005225956061
+derived,Derived,hash_race,data race,large,tsan,3.3786416076302768,3.712472678973527,6.539047444117262
+derived,Derived,hash_uninitialized,uninitialized memory,small,asan,1.7747602552041641,1.949734949510932,2.659522366425368
+derived,Derived,hash_uninitialized,uninitialized memory,small,memcheck,5.668059160096623,7.074003975956378,64.82898573228438
+derived,Derived,hash_uninitialized,uninitialized memory,small,msan,2.9948147755985155,3.4559592430514816,13.744515861520242
+derived,Derived,hash_uninitialized,uninitialized memory,small,tsan,1.7732008839770077,1.957734985964439,6.154657083824471
+derived,Derived,hash_uninitialized,uninitialized memory,large,asan,1.9253351005598989,2.0596833801713603,2.2923693918278674
+derived,Derived,hash_uninitialized,uninitialized memory,large,memcheck,8.748991545471286,10.117042819821762,21.58237389075144
+derived,Derived,hash_uninitialized,uninitialized memory,large,msan,3.1340809505606146,3.403650862674903,4.705477927825324
+derived,Derived,hash_uninitialized,uninitialized memory,large,tsan,2.8445265940751954,3.0247927926209517,4.924094959454487
+derived,Derived,matrix_lifetime,lifetime/deallocation,small,asan,1.6265949623940266,1.8065511132120724,4.510250411413107
+derived,Derived,matrix_lifetime,lifetime/deallocation,small,memcheck,6.310895514631837,8.329505333344493,356.03350465067166
+derived,Derived,matrix_lifetime,lifetime/deallocation,small,msan,1.6898194216686542,1.8896623177738516,3.632959564955329
+derived,Derived,matrix_lifetime,lifetime/deallocation,small,tsan,1.6446272233047763,1.803383121301296,9.98222882148363
+derived,Derived,matrix_lifetime,lifetime/deallocation,large,asan,2.3185599705588213,2.58299741629209,4.312424113134519
+derived,Derived,matrix_lifetime,lifetime/deallocation,large,memcheck,52.4900257782052,68.11792846675615,207.40453264039505
+derived,Derived,matrix_lifetime,lifetime/deallocation,large,msan,2.4687542806689846,2.722044484263569,4.529324710536345
+derived,Derived,matrix_lifetime,lifetime/deallocation,large,tsan,4.9657520496720755,5.6494391037173335,13.986431354716812
+derived,Derived,matrix_oob,out-of-bounds access,small,asan,2.640116750044509,3.1777889090656197,71.58284933001462
+derived,Derived,matrix_oob,out-of-bounds access,small,memcheck,6.286268547335794,8.385121820236398,362.2907040684676
+derived,Derived,matrix_oob,out-of-bounds access,small,msan,1.6505041038621473,1.856554461050184,3.640809756117142
+derived,Derived,matrix_oob,out-of-bounds access,small,tsan,1.6478967043173487,1.8204323884180638,10.681758277395055
+derived,Derived,matrix_oob,out-of-bounds access,large,asan,3.1151762803235155,3.5447908776812302,7.289561001522537
+derived,Derived,matrix_oob,out-of-bounds access,large,memcheck,51.96035168830147,68.72330006883908,210.22316336448387
+derived,Derived,matrix_oob,out-of-bounds access,large,msan,2.3528222866394066,2.584342547885711,4.185961080289312
+derived,Derived,matrix_oob,out-of-bounds access,large,tsan,4.979752036491703,5.666039201357954,14.090742788073777
+derived,Derived,matrix_race,data race,small,asan,1.6277983928071613,1.8181685473887603,4.580934541421373
+derived,Derived,matrix_race,data race,small,memcheck,6.334735317237342,8.281349918840672,364.2882057772569
+derived,Derived,matrix_race,data race,small,msan,1.6995356322544197,1.901565871072352,3.473469340986679
+derived,Derived,matrix_race,data race,small,tsan,2.6315963012231363,3.1881140659460896,79.1929048588357
+derived,Derived,matrix_race,data race,large,asan,2.3196620384989695,2.575894985508633,4.294683583313332
+derived,Derived,matrix_race,data race,large,memcheck,52.405908275432886,67.80295339890212,208.93070865526752
+derived,Derived,matrix_race,data race,large,msan,2.362713306841357,2.5981037453878195,4.142311690112544
+derived,Derived,matrix_race,data race,large,tsan,5.721097360683739,6.614289622112404,17.136277823652012
+derived,Derived,matrix_uninitialized,uninitialized memory,small,asan,1.6174926701663044,1.8085066414879967,4.714091159349718
+derived,Derived,matrix_uninitialized,uninitialized memory,small,memcheck,6.344152614060194,8.509974977334142,369.2993781657658
+derived,Derived,matrix_uninitialized,uninitialized memory,small,msan,2.674552476090011,3.2335405124144883,71.31050734982712
+derived,Derived,matrix_uninitialized,uninitialized memory,small,tsan,1.6391208240056845,1.8290882080770396,10.893403542863577
+derived,Derived,matrix_uninitialized,uninitialized memory,large,asan,2.3520408633134964,2.5950300640785264,4.35520686921261
+derived,Derived,matrix_uninitialized,uninitialized memory,large,memcheck,51.988060795761406,68.72914798768477,208.75539727574056
+derived,Derived,matrix_uninitialized,uninitialized memory,large,msan,3.1437972986612994,3.5846428492562534,7.2439871557333655
+derived,Derived,matrix_uninitialized,uninitialized memory,large,tsan,4.985894639468253,5.660316647254216,13.976738208523813

@@ -1,0 +1,65 @@
+group,scope,configuration,workload,variable,n,shapiro_w,shapiro_p
+Juliet,primary build-and-run time,asan,small,time_overhead,12,0.6617950781185273,3.700285059745923e-4
+Juliet,primary build-and-run time,asan,small,energy_overhead,12,0.6720402651662463,4.5927230627272906e-4
+Juliet,primary build-and-run time,asan,large,time_overhead,12,0.7366743638936004,0.0019466893866247603
+Juliet,primary build-and-run time,asan,large,energy_overhead,12,0.7435836502440737,0.0022922416064090974
+Juliet,primary build-and-run time,msan,small,time_overhead,12,0.6103809766221014,1.3110419528006105e-4
+Juliet,primary build-and-run time,msan,small,energy_overhead,12,0.6199070639219022,1.5801058522221383e-4
+Juliet,primary build-and-run time,msan,large,time_overhead,12,0.685264301322678,6.099995852212626e-4
+Juliet,primary build-and-run time,msan,large,energy_overhead,12,0.7141392791385379,0.0011569703531095483
+Juliet,primary build-and-run time,tsan,small,time_overhead,12,0.630609371649224,1.9545142340626095e-4
+Juliet,primary build-and-run time,tsan,small,energy_overhead,12,0.6476184489813284,2.7586107549764635e-4
+Juliet,primary build-and-run time,tsan,large,time_overhead,12,0.654283719421175,3.1646843980985697e-4
+Juliet,primary build-and-run time,tsan,large,energy_overhead,12,0.7535812531388114,0.002913360402267946
+Juliet,primary build-and-run time,memcheck,small,time_overhead,12,0.6711241607743109,4.504240867823962e-4
+Juliet,primary build-and-run time,memcheck,small,energy_overhead,12,0.7125233432096489,0.0011153994923611328
+Juliet,primary build-and-run time,memcheck,large,time_overhead,12,0.6361132611257708,2.1830878387621127e-4
+Juliet,primary build-and-run time,memcheck,large,energy_overhead,12,0.8477650990798399,0.03445640943115208
+Juliet,runtime-only sensitivity,asan,small,time_overhead,12,0.6615756133960212,3.6833295704722453e-4
+Juliet,runtime-only sensitivity,asan,small,energy_overhead,12,0.6720402651662463,4.5927230627272906e-4
+Juliet,runtime-only sensitivity,asan,large,time_overhead,12,0.7283741355581386,0.001603629308979537
+Juliet,runtime-only sensitivity,asan,large,energy_overhead,12,0.7435836502440737,0.0022922416064090974
+Juliet,runtime-only sensitivity,msan,small,time_overhead,12,0.5766944333208559,6.903345920459872e-5
+Juliet,runtime-only sensitivity,msan,small,energy_overhead,12,0.6199070639219022,1.5801058522221383e-4
+Juliet,runtime-only sensitivity,msan,large,time_overhead,12,0.6694777608720408,4.349775173167772e-4
+Juliet,runtime-only sensitivity,msan,large,energy_overhead,12,0.7141392791385379,0.0011569703531095483
+Juliet,runtime-only sensitivity,tsan,small,time_overhead,12,0.6502633425623422,2.9126485810103013e-4
+Juliet,runtime-only sensitivity,tsan,small,energy_overhead,12,0.6476184489813284,2.7586107549764635e-4
+Juliet,runtime-only sensitivity,tsan,large,time_overhead,12,0.6185973072230373,1.5398458959800035e-4
+Juliet,runtime-only sensitivity,tsan,large,energy_overhead,12,0.7535812531388114,0.002913360402267946
+Juliet,runtime-only sensitivity,memcheck,small,time_overhead,12,0.7147542330138696,0.0011732232950303044
+Juliet,runtime-only sensitivity,memcheck,small,energy_overhead,12,0.7125233432096489,0.0011153994923611328
+Juliet,runtime-only sensitivity,memcheck,large,time_overhead,12,0.559588864598074,5.037214781659954e-5
+Juliet,runtime-only sensitivity,memcheck,large,energy_overhead,12,0.8477650990798399,0.03445640943115208
+Derived,primary build-and-run time,asan,small,time_overhead,12,0.802767855116617,0.010074713789040138
+Derived,primary build-and-run time,asan,small,energy_overhead,12,0.7867081167326607,0.006641724341113568
+Derived,primary build-and-run time,asan,large,time_overhead,12,0.859229405707707,0.04781280233040695
+Derived,primary build-and-run time,asan,large,energy_overhead,12,0.8856133770350633,0.10346605188567456
+Derived,primary build-and-run time,msan,small,time_overhead,12,0.8175885388737922,0.01495243967582799
+Derived,primary build-and-run time,msan,small,energy_overhead,12,0.8422520043141832,0.02949250866513021
+Derived,primary build-and-run time,msan,large,time_overhead,12,0.8795278364675629,0.08643445370492261
+Derived,primary build-and-run time,msan,large,energy_overhead,12,0.8785581941932221,0.0839993717313041
+Derived,primary build-and-run time,tsan,small,time_overhead,12,0.8352944829881076,0.024281951330993035
+Derived,primary build-and-run time,tsan,small,energy_overhead,12,0.8348784942225612,0.024002994601027804
+Derived,primary build-and-run time,tsan,large,time_overhead,12,0.842847814789169,0.02999059624242804
+Derived,primary build-and-run time,tsan,large,energy_overhead,12,0.8535961457480363,0.040676167870712945
+Derived,primary build-and-run time,memcheck,small,time_overhead,12,0.7345918634894888,0.0018538113209066226
+Derived,primary build-and-run time,memcheck,small,energy_overhead,12,0.8233525453718039,0.0174815520571288
+Derived,primary build-and-run time,memcheck,large,time_overhead,12,0.6697741204541922,4.3771558316451487e-4
+Derived,primary build-and-run time,memcheck,large,energy_overhead,12,0.674093476362048,4.797861453479604e-4
+Derived,runtime-only sensitivity,asan,small,time_overhead,12,0.654685155021894,3.1911025253410425e-4
+Derived,runtime-only sensitivity,asan,small,energy_overhead,12,0.7867081167326607,0.006641724341113568
+Derived,runtime-only sensitivity,asan,large,time_overhead,12,0.8576825807887589,0.04573112383074159
+Derived,runtime-only sensitivity,asan,large,energy_overhead,12,0.8856133770350633,0.10346605188567456
+Derived,runtime-only sensitivity,msan,small,time_overhead,12,0.5174607514227016,2.383261586873829e-5
+Derived,runtime-only sensitivity,msan,small,energy_overhead,12,0.8422520043141832,0.02949250866513021
+Derived,runtime-only sensitivity,msan,large,time_overhead,12,0.7951288031790565,0.008251558465706918
+Derived,runtime-only sensitivity,msan,large,energy_overhead,12,0.8785581941932221,0.0839993717313041
+Derived,runtime-only sensitivity,tsan,small,time_overhead,12,0.6405186316975828,2.386632831565432e-4
+Derived,runtime-only sensitivity,tsan,small,energy_overhead,12,0.8348784942225612,0.024002994601027804
+Derived,runtime-only sensitivity,tsan,large,time_overhead,12,0.7864724026332206,0.0066017951229216274
+Derived,runtime-only sensitivity,tsan,large,energy_overhead,12,0.8535961457480363,0.040676167870712945
+Derived,runtime-only sensitivity,memcheck,small,time_overhead,12,0.7554894402556431,0.0030511824293354716
+Derived,runtime-only sensitivity,memcheck,small,energy_overhead,12,0.8233525453718039,0.0174815520571288
+Derived,runtime-only sensitivity,memcheck,large,time_overhead,12,0.6640893435882094,3.882621894714046e-4
+Derived,runtime-only sensitivity,memcheck,large,energy_overhead,12,0.674093476362048,4.797861453479604e-4

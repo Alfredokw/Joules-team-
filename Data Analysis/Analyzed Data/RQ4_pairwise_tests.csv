@@ -1,0 +1,49 @@
+group,scope,configuration,workload,outcome,pair,method,p_adjustment,p_adjusted,cliffs_delta
+Juliet,energy overhead,asan,large,energy overhead,lifetime/deallocation-data race,Tukey HSD,Tukey,7.113904498812218e-8,-1
+Juliet,energy overhead,asan,large,energy overhead,out-of-bounds access-data race,Tukey HSD,Tukey,5.586307882943231e-8,-1
+Juliet,energy overhead,asan,large,energy overhead,uninitialized memory-data race,Tukey HSD,Tukey,0.23718808369933253,-0.5555555555555556
+Juliet,energy overhead,asan,large,energy overhead,out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.9174528178676372,-0.5555555555555556
+Juliet,energy overhead,asan,large,energy overhead,uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,1.775180468177595e-7,1
+Juliet,energy overhead,asan,large,energy overhead,uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,1.322175473550402e-7,1
+Juliet,energy overhead,msan,small,energy overhead,lifetime/deallocation-data race,Tukey HSD,Tukey,0.659942229552407,0.1111111111111111
+Juliet,energy overhead,msan,small,energy overhead,out-of-bounds access-data race,Tukey HSD,Tukey,0.2939952363404955,1
+Juliet,energy overhead,msan,small,energy overhead,uninitialized memory-data race,Tukey HSD,Tukey,1.4959093297406412e-8,-1
+Juliet,energy overhead,msan,small,energy overhead,out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.8762480053482611,0.5555555555555556
+Juliet,energy overhead,msan,small,energy overhead,uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,1.2309843477886773e-8,-1
+Juliet,energy overhead,msan,small,energy overhead,uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,1.0877520328911316e-8,-1
+Juliet,build-and-run time overhead,asan,small,build-and-run time overhead,lifetime/deallocation-data race,Tukey HSD,Tukey,5.1736392947532295e-14,-1
+Juliet,build-and-run time overhead,asan,small,build-and-run time overhead,out-of-bounds access-data race,Tukey HSD,Tukey,5.1736392947532295e-14,-1
+Juliet,build-and-run time overhead,asan,small,build-and-run time overhead,uninitialized memory-data race,Tukey HSD,Tukey,0.9859524935712203,0.3333333333333333
+Juliet,build-and-run time overhead,asan,small,build-and-run time overhead,out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.9791685193629032,0.3333333333333333
+Juliet,build-and-run time overhead,asan,small,build-and-run time overhead,uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,5.1736392947532295e-14,1
+Juliet,build-and-run time overhead,asan,small,build-and-run time overhead,uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,5.1736392947532295e-14,1
+Juliet,build-and-run time overhead,memcheck,small,build-and-run time overhead,lifetime/deallocation-data race,Tukey HSD,Tukey,1.0395879146418707e-7,1
+Juliet,build-and-run time overhead,memcheck,small,build-and-run time overhead,out-of-bounds access-data race,Tukey HSD,Tukey,7.335830354282535e-8,1
+Juliet,build-and-run time overhead,memcheck,small,build-and-run time overhead,uninitialized memory-data race,Tukey HSD,Tukey,4.913310192034004e-8,1
+Juliet,build-and-run time overhead,memcheck,small,build-and-run time overhead,out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.838721706662515,0.3333333333333333
+Juliet,build-and-run time overhead,memcheck,small,build-and-run time overhead,uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,0.297009528481863,1
+Juliet,build-and-run time overhead,memcheck,small,build-and-run time overhead,uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,0.7119169602065454,0.5555555555555556
+Juliet,runtime-only time overhead (sensitivity),asan,small,runtime-only time overhead (sensitivity),lifetime/deallocation-data race,Tukey HSD,Tukey,5.1736392947532295e-14,-1
+Juliet,runtime-only time overhead (sensitivity),asan,small,runtime-only time overhead (sensitivity),out-of-bounds access-data race,Tukey HSD,Tukey,5.1736392947532295e-14,-1
+Juliet,runtime-only time overhead (sensitivity),asan,small,runtime-only time overhead (sensitivity),uninitialized memory-data race,Tukey HSD,Tukey,0.905475328893572,0.3333333333333333
+Juliet,runtime-only time overhead (sensitivity),asan,small,runtime-only time overhead (sensitivity),out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.8589911733048861,0.5555555555555556
+Juliet,runtime-only time overhead (sensitivity),asan,small,runtime-only time overhead (sensitivity),uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,5.1736392947532295e-14,1
+Juliet,runtime-only time overhead (sensitivity),asan,small,runtime-only time overhead (sensitivity),uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,5.1736392947532295e-14,1
+Juliet,runtime-only time overhead (sensitivity),asan,large,runtime-only time overhead (sensitivity),lifetime/deallocation-data race,Tukey HSD,Tukey,7.493617126819174e-8,-1
+Juliet,runtime-only time overhead (sensitivity),asan,large,runtime-only time overhead (sensitivity),out-of-bounds access-data race,Tukey HSD,Tukey,9.105802689646225e-8,-1
+Juliet,runtime-only time overhead (sensitivity),asan,large,runtime-only time overhead (sensitivity),uninitialized memory-data race,Tukey HSD,Tukey,0.9078053186398016,0.1111111111111111
+Juliet,runtime-only time overhead (sensitivity),asan,large,runtime-only time overhead (sensitivity),out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.9635453118875963,0.3333333333333333
+Juliet,runtime-only time overhead (sensitivity),asan,large,runtime-only time overhead (sensitivity),uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,9.892889341056588e-8,1
+Juliet,runtime-only time overhead (sensitivity),asan,large,runtime-only time overhead (sensitivity),uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,1.2175523844693004e-7,1
+Derived,energy overhead,tsan,small,energy overhead,lifetime/deallocation-data race,Tukey HSD,Tukey,0.048149869465056505,0.7777777777777778
+Derived,energy overhead,tsan,small,energy overhead,out-of-bounds access-data race,Tukey HSD,Tukey,0.0073533988278933204,1
+Derived,energy overhead,tsan,small,energy overhead,uninitialized memory-data race,Tukey HSD,Tukey,0.00656662740071734,1
+Derived,energy overhead,tsan,small,energy overhead,out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.5341891832967265,0.3333333333333333
+Derived,energy overhead,tsan,small,energy overhead,uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,0.48658536679647557,0.5555555555555556
+Derived,energy overhead,tsan,small,energy overhead,uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,0.9997177583197857,0.3333333333333333
+Derived,build-and-run time overhead,tsan,small,build-and-run time overhead,lifetime/deallocation-data race,Tukey HSD,Tukey,0.049413316792132456,0.7777777777777778
+Derived,build-and-run time overhead,tsan,small,build-and-run time overhead,out-of-bounds access-data race,Tukey HSD,Tukey,0.0075444599840427395,1
+Derived,build-and-run time overhead,tsan,small,build-and-run time overhead,uninitialized memory-data race,Tukey HSD,Tukey,0.007556745641894791,1
+Derived,build-and-run time overhead,tsan,small,build-and-run time overhead,out-of-bounds access-lifetime/deallocation,Tukey HSD,Tukey,0.5351728563704435,0.3333333333333333
+Derived,build-and-run time overhead,tsan,small,build-and-run time overhead,uninitialized memory-lifetime/deallocation,Tukey HSD,Tukey,0.5358663829199034,0.3333333333333333
+Derived,build-and-run time overhead,tsan,small,build-and-run time overhead,uninitialized memory-out-of-bounds access,Tukey HSD,Tukey,0.9999999991738076,0.1111111111111111
