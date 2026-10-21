@@ -1,0 +1,19 @@
+"group","outcome","sanitizer","workload","family_1","family_2","method","p_value","effect_size","effect_size_type","p_holm_within_omnibus"
+"derived","buildrun_time_overhead","msan","small","data race","lifetime/deallocation","Wilcoxon signed-rank, paired, two-sided",0.25,1,"paired rank-biserial",1
+"derived","buildrun_time_overhead","msan","small","data race","out-of-bounds access","Wilcoxon signed-rank, paired, two-sided",0.25,1,"paired rank-biserial",1
+"derived","buildrun_time_overhead","msan","small","data race","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","buildrun_time_overhead","msan","small","lifetime/deallocation","out-of-bounds access","Wilcoxon signed-rank, paired, two-sided",0.25,1,"paired rank-biserial",1
+"derived","buildrun_time_overhead","msan","small","lifetime/deallocation","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","buildrun_time_overhead","msan","small","out-of-bounds access","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","small","data race","lifetime/deallocation","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","small","data race","out-of-bounds access","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","small","data race","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","small","lifetime/deallocation","out-of-bounds access","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","small","lifetime/deallocation","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","small","out-of-bounds access","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","large","data race","lifetime/deallocation","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","large","data race","out-of-bounds access","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","large","data race","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","large","lifetime/deallocation","out-of-bounds access","Wilcoxon signed-rank, paired, two-sided",0.25,1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","large","lifetime/deallocation","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1
+"derived","runtime_only_overhead","msan","large","out-of-bounds access","uninitialized memory","Wilcoxon signed-rank, paired, two-sided",0.25,-1,"paired rank-biserial",1

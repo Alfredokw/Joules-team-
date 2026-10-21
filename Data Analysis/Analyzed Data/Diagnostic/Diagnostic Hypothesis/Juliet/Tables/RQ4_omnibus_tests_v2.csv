@@ -1,0 +1,25 @@
+"group","outcome","sanitizer","workload","analysis_role","test","n_subjects","subjects_per_family","statistic","p_value","effect_size","effect_size_type","p_holm"
+"juliet","energy_overhead","asan","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.74358974358974,0.00602,0.717948717948718,"epsilon squared",0.03612
+"juliet","energy_overhead","asan","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.94871794871796,0.00432,0.743589743589745,"epsilon squared",0.03024
+"juliet","energy_overhead","msan","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.23076923076923,0.01398,0.653846153846154,"epsilon squared",0.05592
+"juliet","energy_overhead","msan","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",5.20512820512821,0.16028,0.275641025641026,"epsilon squared",0.44622
+"juliet","energy_overhead","tsan","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.43589743589745,0.01114,0.679487179487181,"epsilon squared",0.0557
+"juliet","energy_overhead","tsan","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",5.35897435897436,0.14874,0.294871794871795,"epsilon squared",0.44622
+"juliet","energy_overhead","memcheck","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",9.15384615384617,0.0029,0.769230769230771,"epsilon squared",0.0232
+"juliet","energy_overhead","memcheck","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",1.66666666666666,0.69354,0,"epsilon squared",0.69354
+"juliet","buildrun_time_overhead","asan","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.53846153846154,0.00886,0.692307692307693,"epsilon squared",0.05316
+"juliet","buildrun_time_overhead","asan","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.64102564102565,0.00716,0.705128205128206,"epsilon squared",0.05012
+"juliet","buildrun_time_overhead","msan","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",9.97435897435899,0.00032,0.871794871794873,"epsilon squared",0.00256
+"juliet","buildrun_time_overhead","msan","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",6.69230769230769,0.05908,0.461538461538462,"epsilon squared",0.23632
+"juliet","buildrun_time_overhead","tsan","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",5.76923076923078,0.1181,0.346153846153848,"epsilon squared",0.3543
+"juliet","buildrun_time_overhead","tsan","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",4.74358974358974,0.2074,0.217948717948718,"epsilon squared",0.4148
+"juliet","buildrun_time_overhead","memcheck","small","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.43589743589745,0.0103,0.679487179487181,"epsilon squared",0.05316
+"juliet","buildrun_time_overhead","memcheck","large","primary","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",2.07692307692308,0.60808,0,"epsilon squared",0.60808
+"juliet","runtime_only_overhead","asan","small","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.74358974358974,0.00648,0.717948717948718,"epsilon squared",0.04536
+"juliet","runtime_only_overhead","asan","large","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",8.43589743589744,0.01058,0.67948717948718,"epsilon squared",0.06348
+"juliet","runtime_only_overhead","msan","small","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",9.35897435897436,0.00212,0.794871794871796,"epsilon squared",0.01696
+"juliet","runtime_only_overhead","msan","large","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",5.97435897435899,0.10342,0.371794871794873,"epsilon squared",0.41368
+"juliet","runtime_only_overhead","tsan","small","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",7,0.04512,0.5,"epsilon squared",0.2256
+"juliet","runtime_only_overhead","tsan","large","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",5.87179487179487,0.11128,0.358974358974359,"epsilon squared",0.41368
+"juliet","runtime_only_overhead","memcheck","small","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",1.66666666666667,0.69026,0,"epsilon squared",1
+"juliet","runtime_only_overhead","memcheck","large","runtime-only sensitivity","Monte Carlo permutation Kruskal-Wallis (B=49999)",12,"3/3/3/3",2.28205128205128,0.5702,0,"epsilon squared",1

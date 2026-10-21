@@ -1,0 +1,23 @@
+"group","family","configuration","detected","runs"
+"juliet","data race","asan",0,180
+"juliet","uninitialized memory","asan",0,180
+"juliet","data race","baseline",0,180
+"juliet","lifetime/deallocation","baseline",0,180
+"juliet","out-of-bounds access","baseline",0,180
+"juliet","uninitialized memory","baseline",0,180
+"juliet","data race","memcheck",0,180
+"juliet","out-of-bounds access","memcheck",0,60
+"juliet","data race","msan",0,180
+"juliet","lifetime/deallocation","msan",0,180
+"juliet","out-of-bounds access","msan",0,180
+"juliet","lifetime/deallocation","tsan",0,120
+"juliet","out-of-bounds access","tsan",0,180
+"juliet","uninitialized memory","tsan",0,180
+"juliet","lifetime/deallocation","asan",1,180
+"juliet","out-of-bounds access","asan",1,180
+"juliet","lifetime/deallocation","memcheck",1,180
+"juliet","out-of-bounds access","memcheck",1,120
+"juliet","uninitialized memory","memcheck",1,180
+"juliet","uninitialized memory","msan",1,180
+"juliet","data race","tsan",1,180
+"juliet","lifetime/deallocation","tsan",1,60

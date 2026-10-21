@@ -1,0 +1,17 @@
+"group","time_scope","sanitizer","workload","analysis_role","test","n","correlation","p_value","p_holm"
+"juliet","buildrun_time_overhead","asan","small","primary","Spearman rank correlation, one-sided",12,0.797202797202797,0.000950183862764134,0.00380073545105654
+"juliet","buildrun_time_overhead","asan","large","primary","Spearman rank correlation, one-sided",12,0.797202797202797,0.000950183862764134,0.00380073545105654
+"juliet","buildrun_time_overhead","msan","small","primary","Spearman rank correlation, one-sided",12,0.923076923076923,9.31097554934041e-06,6.51768288453829e-05
+"juliet","buildrun_time_overhead","msan","large","primary","Spearman rank correlation, one-sided",12,0.818181818181818,0.000571552543402031,0.00285776271701015
+"juliet","buildrun_time_overhead","tsan","small","primary","Spearman rank correlation, one-sided",12,0.902097902097902,2.99892872326885e-05,0.000179935723396131
+"juliet","buildrun_time_overhead","tsan","large","primary","Spearman rank correlation, one-sided",12,0.685314685314685,0.00695298440718138,0.0139059688143628
+"juliet","buildrun_time_overhead","memcheck","small","primary","Spearman rank correlation, one-sided",12,0.986013986013986,2.05844795582715e-09,1.64675836466172e-08
+"juliet","buildrun_time_overhead","memcheck","large","primary","Spearman rank correlation, one-sided",12,0.475524475524476,0.059087978506516,0.059087978506516
+"juliet","runtime_only_overhead","asan","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.741258741258741,0.00290057523723912,0.0145028761861956
+"juliet","runtime_only_overhead","asan","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.811188811188811,0.000681657626363597,0.00477160338454518
+"juliet","runtime_only_overhead","msan","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.72027972027972,0.00411988435616922,0.0164795374246769
+"juliet","runtime_only_overhead","msan","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.825174825174825,0.000475681427777753,0.00380545142222202
+"juliet","runtime_only_overhead","tsan","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.692307692307692,0.00629651524804705,0.0188895457441412
+"juliet","runtime_only_overhead","tsan","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.762237762237762,0.00197522448627133,0.011851346917628
+"juliet","runtime_only_overhead","memcheck","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.447552447552448,0.0722931506516737,0.0800193759202748
+"juliet","runtime_only_overhead","memcheck","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.524475524475525,0.0400096879601374,0.0800193759202748

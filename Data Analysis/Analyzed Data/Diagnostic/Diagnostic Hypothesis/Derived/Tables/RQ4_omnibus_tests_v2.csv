@@ -1,0 +1,25 @@
+"group","outcome","sanitizer","workload","analysis_role","test","n_subjects","subjects_per_family","statistic","p_value","effect_size","effect_size_type","p_holm"
+"derived","energy_overhead","asan","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",7,0.0538194444444444,0.777777777777778,"Kendall W",0.376736111111111
+"derived","energy_overhead","asan","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",4.2,0.300347222222222,0.466666666666667,"Kendall W",1
+"derived","energy_overhead","msan","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",8.2,0.0173611111111111,0.911111111111111,"Kendall W",0.138888888888889
+"derived","energy_overhead","msan","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",7,0.0538194444444444,0.777777777777778,"Kendall W",0.376736111111111
+"derived","energy_overhead","tsan","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",5,0.206597222222222,0.555555555555556,"Kendall W",1
+"derived","energy_overhead","tsan","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",4.2,0.300347222222222,0.466666666666667,"Kendall W",1
+"derived","energy_overhead","memcheck","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",1.8,0.727430555555556,0.2,"Kendall W",1
+"derived","energy_overhead","memcheck","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",2.6,0.524305555555556,0.288888888888889,"Kendall W",1
+"derived","buildrun_time_overhead","asan","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",5.8,0.147569444444444,0.644444444444444,"Kendall W",0.885416666666667
+"derived","buildrun_time_overhead","asan","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",5,0.206597222222222,0.555555555555556,"Kendall W",0.885416666666667
+"derived","buildrun_time_overhead","msan","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",9,0.00173611111111111,1,"Kendall W",0.0138888888888889
+"derived","buildrun_time_overhead","msan","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",8.2,0.0173611111111111,0.911111111111111,"Kendall W",0.121527777777778
+"derived","buildrun_time_overhead","tsan","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",3.4,0.446180555555556,0.377777777777778,"Kendall W",0.901041666666667
+"derived","buildrun_time_overhead","tsan","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",4.2,0.300347222222222,0.466666666666667,"Kendall W",0.901041666666667
+"derived","buildrun_time_overhead","memcheck","small","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",5.8,0.147569444444444,0.644444444444444,"Kendall W",0.885416666666667
+"derived","buildrun_time_overhead","memcheck","large","primary","Exact blocked Friedman permutation test",12,"3/3/3/3",2.6,0.524305555555556,0.288888888888889,"Kendall W",0.901041666666667
+"derived","runtime_only_overhead","asan","small","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",4.2,0.300347222222222,0.466666666666667,"Kendall W",1
+"derived","runtime_only_overhead","asan","large","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",5.4,0.175347222222222,0.6,"Kendall W",1
+"derived","runtime_only_overhead","msan","small","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",9,0.00173611111111111,1,"Kendall W",0.0138888888888889
+"derived","runtime_only_overhead","msan","large","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",9,0.00173611111111111,1,"Kendall W",0.0138888888888889
+"derived","runtime_only_overhead","tsan","small","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",3.4,0.446180555555556,0.377777777777778,"Kendall W",1
+"derived","runtime_only_overhead","tsan","large","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",4.2,0.300347222222222,0.466666666666667,"Kendall W",1
+"derived","runtime_only_overhead","memcheck","small","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",3.4,0.446180555555556,0.377777777777778,"Kendall W",1
+"derived","runtime_only_overhead","memcheck","large","runtime-only sensitivity","Exact blocked Friedman permutation test",12,"3/3/3/3",1,0.909722222222222,0.111111111111111,"Kendall W",1

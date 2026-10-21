@@ -1,0 +1,121 @@
+"group","subject_id","family","base_application","workload","configuration","runs"
+"derived","bst_race","data race","bst","large","asan",30
+"derived","bst_lifetime","lifetime/deallocation","bst","large","asan",30
+"derived","bst_oob","out-of-bounds access","bst","large","asan",30
+"derived","bst_uninitialized","uninitialized memory","bst","large","asan",30
+"derived","hash_race","data race","hash_table","large","asan",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","large","asan",30
+"derived","hash_oob","out-of-bounds access","hash_table","large","asan",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","large","asan",30
+"derived","matrix_race","data race","parallel_matrix","large","asan",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","large","asan",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","large","asan",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","large","asan",30
+"derived","bst_race","data race","bst","small","asan",30
+"derived","bst_lifetime","lifetime/deallocation","bst","small","asan",30
+"derived","bst_oob","out-of-bounds access","bst","small","asan",30
+"derived","bst_uninitialized","uninitialized memory","bst","small","asan",30
+"derived","hash_race","data race","hash_table","small","asan",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","small","asan",30
+"derived","hash_oob","out-of-bounds access","hash_table","small","asan",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","small","asan",30
+"derived","matrix_race","data race","parallel_matrix","small","asan",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","small","asan",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","small","asan",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","small","asan",30
+"derived","bst_race","data race","bst","large","baseline",30
+"derived","bst_lifetime","lifetime/deallocation","bst","large","baseline",30
+"derived","bst_oob","out-of-bounds access","bst","large","baseline",30
+"derived","bst_uninitialized","uninitialized memory","bst","large","baseline",30
+"derived","hash_race","data race","hash_table","large","baseline",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","large","baseline",30
+"derived","hash_oob","out-of-bounds access","hash_table","large","baseline",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","large","baseline",30
+"derived","matrix_race","data race","parallel_matrix","large","baseline",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","large","baseline",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","large","baseline",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","large","baseline",30
+"derived","bst_race","data race","bst","small","baseline",30
+"derived","bst_lifetime","lifetime/deallocation","bst","small","baseline",30
+"derived","bst_oob","out-of-bounds access","bst","small","baseline",30
+"derived","bst_uninitialized","uninitialized memory","bst","small","baseline",30
+"derived","hash_race","data race","hash_table","small","baseline",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","small","baseline",30
+"derived","hash_oob","out-of-bounds access","hash_table","small","baseline",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","small","baseline",30
+"derived","matrix_race","data race","parallel_matrix","small","baseline",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","small","baseline",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","small","baseline",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","small","baseline",30
+"derived","bst_race","data race","bst","large","memcheck",30
+"derived","bst_lifetime","lifetime/deallocation","bst","large","memcheck",30
+"derived","bst_oob","out-of-bounds access","bst","large","memcheck",30
+"derived","bst_uninitialized","uninitialized memory","bst","large","memcheck",30
+"derived","hash_race","data race","hash_table","large","memcheck",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","large","memcheck",30
+"derived","hash_oob","out-of-bounds access","hash_table","large","memcheck",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","large","memcheck",30
+"derived","matrix_race","data race","parallel_matrix","large","memcheck",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","large","memcheck",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","large","memcheck",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","large","memcheck",30
+"derived","bst_race","data race","bst","small","memcheck",30
+"derived","bst_lifetime","lifetime/deallocation","bst","small","memcheck",30
+"derived","bst_oob","out-of-bounds access","bst","small","memcheck",30
+"derived","bst_uninitialized","uninitialized memory","bst","small","memcheck",30
+"derived","hash_race","data race","hash_table","small","memcheck",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","small","memcheck",30
+"derived","hash_oob","out-of-bounds access","hash_table","small","memcheck",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","small","memcheck",30
+"derived","matrix_race","data race","parallel_matrix","small","memcheck",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","small","memcheck",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","small","memcheck",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","small","memcheck",30
+"derived","bst_race","data race","bst","large","msan",30
+"derived","bst_lifetime","lifetime/deallocation","bst","large","msan",30
+"derived","bst_oob","out-of-bounds access","bst","large","msan",30
+"derived","bst_uninitialized","uninitialized memory","bst","large","msan",30
+"derived","hash_race","data race","hash_table","large","msan",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","large","msan",30
+"derived","hash_oob","out-of-bounds access","hash_table","large","msan",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","large","msan",30
+"derived","matrix_race","data race","parallel_matrix","large","msan",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","large","msan",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","large","msan",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","large","msan",30
+"derived","bst_race","data race","bst","small","msan",30
+"derived","bst_lifetime","lifetime/deallocation","bst","small","msan",30
+"derived","bst_oob","out-of-bounds access","bst","small","msan",30
+"derived","bst_uninitialized","uninitialized memory","bst","small","msan",30
+"derived","hash_race","data race","hash_table","small","msan",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","small","msan",30
+"derived","hash_oob","out-of-bounds access","hash_table","small","msan",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","small","msan",30
+"derived","matrix_race","data race","parallel_matrix","small","msan",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","small","msan",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","small","msan",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","small","msan",30
+"derived","bst_race","data race","bst","large","tsan",30
+"derived","bst_lifetime","lifetime/deallocation","bst","large","tsan",30
+"derived","bst_oob","out-of-bounds access","bst","large","tsan",30
+"derived","bst_uninitialized","uninitialized memory","bst","large","tsan",30
+"derived","hash_race","data race","hash_table","large","tsan",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","large","tsan",30
+"derived","hash_oob","out-of-bounds access","hash_table","large","tsan",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","large","tsan",30
+"derived","matrix_race","data race","parallel_matrix","large","tsan",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","large","tsan",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","large","tsan",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","large","tsan",30
+"derived","bst_race","data race","bst","small","tsan",30
+"derived","bst_lifetime","lifetime/deallocation","bst","small","tsan",30
+"derived","bst_oob","out-of-bounds access","bst","small","tsan",30
+"derived","bst_uninitialized","uninitialized memory","bst","small","tsan",30
+"derived","hash_race","data race","hash_table","small","tsan",30
+"derived","hash_lifetime","lifetime/deallocation","hash_table","small","tsan",30
+"derived","hash_oob","out-of-bounds access","hash_table","small","tsan",30
+"derived","hash_uninitialized","uninitialized memory","hash_table","small","tsan",30
+"derived","matrix_race","data race","parallel_matrix","small","tsan",30
+"derived","matrix_lifetime","lifetime/deallocation","parallel_matrix","small","tsan",30
+"derived","matrix_oob","out-of-bounds access","parallel_matrix","small","tsan",30
+"derived","matrix_uninitialized","uninitialized memory","parallel_matrix","small","tsan",30

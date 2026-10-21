@@ -1,0 +1,2 @@
+"group","phase","termination_status","workload_complete","valid","compile_return_code","runtime_return_code","measurement_return_code","runs"
+"juliet","measured","completed",1,1,0,0,0,3600

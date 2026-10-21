@@ -1,0 +1,24 @@
+"group","family","configuration","detected","runs"
+"derived","data race","asan",0,180
+"derived","lifetime/deallocation","asan",0,60
+"derived","uninitialized memory","asan",0,180
+"derived","data race","baseline",0,180
+"derived","lifetime/deallocation","baseline",0,180
+"derived","out-of-bounds access","baseline",0,180
+"derived","uninitialized memory","baseline",0,180
+"derived","data race","memcheck",0,180
+"derived","out-of-bounds access","memcheck",0,60
+"derived","data race","msan",0,180
+"derived","lifetime/deallocation","msan",0,180
+"derived","out-of-bounds access","msan",0,180
+"derived","lifetime/deallocation","tsan",0,120
+"derived","out-of-bounds access","tsan",0,180
+"derived","uninitialized memory","tsan",0,180
+"derived","lifetime/deallocation","asan",1,120
+"derived","out-of-bounds access","asan",1,180
+"derived","lifetime/deallocation","memcheck",1,180
+"derived","out-of-bounds access","memcheck",1,120
+"derived","uninitialized memory","memcheck",1,180
+"derived","uninitialized memory","msan",1,180
+"derived","data race","tsan",1,180
+"derived","lifetime/deallocation","tsan",1,60

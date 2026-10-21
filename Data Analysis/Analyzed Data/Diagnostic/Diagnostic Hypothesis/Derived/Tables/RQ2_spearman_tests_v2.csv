@@ -1,0 +1,17 @@
+"group","time_scope","sanitizer","workload","analysis_role","test","n","correlation","p_value","p_holm"
+"derived","buildrun_time_overhead","asan","small","primary","Spearman rank correlation, one-sided",12,0.993006993006993,6.50836528031732e-11,5.20669222425385e-10
+"derived","buildrun_time_overhead","asan","large","primary","Spearman rank correlation, one-sided",12,0.958041958041958,4.77179091341915e-07,2.38589545670957e-06
+"derived","buildrun_time_overhead","msan","small","primary","Spearman rank correlation, one-sided",12,0.937062937062937,3.49658247660527e-06,1.04897474298158e-05
+"derived","buildrun_time_overhead","msan","large","primary","Spearman rank correlation, one-sided",12,0.944055944055944,1.96363054048298e-06,7.85452216193192e-06
+"derived","buildrun_time_overhead","tsan","small","primary","Spearman rank correlation, one-sided",12,0.979020979020979,1.54490069927439e-08,1.08143048949207e-07
+"derived","buildrun_time_overhead","tsan","large","primary","Spearman rank correlation, one-sided",12,0.979020979020979,1.54490069927439e-08,1.08143048949207e-07
+"derived","buildrun_time_overhead","memcheck","small","primary","Spearman rank correlation, one-sided",12,0.874125874125874,0.000100356536662116,0.000100356536662116
+"derived","buildrun_time_overhead","memcheck","large","primary","Spearman rank correlation, one-sided",12,0.916083916083916,1.42140226742737e-05,2.84280453485474e-05
+"derived","runtime_only_overhead","asan","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.671328671328671,0.0084157280934467,0.0252471842803401
+"derived","runtime_only_overhead","asan","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.86013986013986,0.000165834169563461,0.000995005017380764
+"derived","runtime_only_overhead","msan","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.188811188811189,0.278368528088416,0.278368528088416
+"derived","runtime_only_overhead","msan","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.783216783216783,0.00129310741668129,0.00646553708340646
+"derived","runtime_only_overhead","tsan","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.762237762237762,0.00197522448627133,0.00790089794508531
+"derived","runtime_only_overhead","tsan","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.972027972027972,6.43405787574738e-08,5.1472463005979e-07
+"derived","runtime_only_overhead","memcheck","small","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.461538461538462,0.0654740347535863,0.130948069507173
+"derived","runtime_only_overhead","memcheck","large","runtime-only sensitivity","Spearman rank correlation, one-sided",12,0.909090909090909,2.0955223265171e-05,0.000146686562856197

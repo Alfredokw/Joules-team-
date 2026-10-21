@@ -1,0 +1,37 @@
+"group","outcome","sanitizer","workload","family_1","family_2","method","p_value","effect_size","effect_size_type","p_holm_within_omnibus"
+"juliet","energy_overhead","asan","small","data race","lifetime/deallocation","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","small","data race","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","small","data race","uninitialized memory","Wilcoxon rank-sum, two-sided",0.4,0.555555555555556,"Cliff delta",0.8
+"juliet","energy_overhead","asan","small","lifetime/deallocation","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.7,-0.333333333333333,"Cliff delta",0.8
+"juliet","energy_overhead","asan","small","lifetime/deallocation","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","small","out-of-bounds access","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","large","data race","lifetime/deallocation","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","large","data race","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","large","data race","uninitialized memory","Wilcoxon rank-sum, two-sided",0.4,-0.555555555555556,"Cliff delta",0.8
+"juliet","energy_overhead","asan","large","lifetime/deallocation","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.4,-0.555555555555556,"Cliff delta",0.8
+"juliet","energy_overhead","asan","large","lifetime/deallocation","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","asan","large","out-of-bounds access","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","memcheck","small","data race","lifetime/deallocation","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","memcheck","small","data race","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","memcheck","small","data race","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","memcheck","small","lifetime/deallocation","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.2,0.777777777777778,"Cliff delta",0.6
+"juliet","energy_overhead","memcheck","small","lifetime/deallocation","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","energy_overhead","memcheck","small","out-of-bounds access","uninitialized memory","Wilcoxon rank-sum, two-sided",0.4,0.555555555555556,"Cliff delta",0.6
+"juliet","buildrun_time_overhead","msan","small","data race","lifetime/deallocation","Wilcoxon rank-sum, two-sided",0.2,0.777777777777778,"Cliff delta",0.6
+"juliet","buildrun_time_overhead","msan","small","data race","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","buildrun_time_overhead","msan","small","data race","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","buildrun_time_overhead","msan","small","lifetime/deallocation","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","buildrun_time_overhead","msan","small","lifetime/deallocation","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","buildrun_time_overhead","msan","small","out-of-bounds access","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","asan","small","data race","lifetime/deallocation","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","asan","small","data race","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","asan","small","data race","uninitialized memory","Wilcoxon rank-sum, two-sided",0.7,0.333333333333333,"Cliff delta",0.8
+"juliet","runtime_only_overhead","asan","small","lifetime/deallocation","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.4,0.555555555555556,"Cliff delta",0.8
+"juliet","runtime_only_overhead","asan","small","lifetime/deallocation","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","asan","small","out-of-bounds access","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","msan","small","data race","lifetime/deallocation","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","msan","small","data race","out-of-bounds access","Wilcoxon rank-sum, two-sided",0.1,1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","msan","small","data race","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","msan","small","lifetime/deallocation","out-of-bounds access","Wilcoxon rank-sum, two-sided",1,-0.111111111111111,"Cliff delta",1
+"juliet","runtime_only_overhead","msan","small","lifetime/deallocation","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6
+"juliet","runtime_only_overhead","msan","small","out-of-bounds access","uninitialized memory","Wilcoxon rank-sum, two-sided",0.1,-1,"Cliff delta",0.6

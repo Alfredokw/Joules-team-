@@ -1,0 +1,61 @@
+"group","subject_id","base_application","family","configuration","rss_small","rss_large","input_small","input_large","memory_ratio","input_ratio","log_ratio_departure"
+"juliet","juliet_lifetime_char_leak","juliet_case","lifetime/deallocation","asan",15280947.2,240502784,1000000,26000000,15.7387353579757,26,-0.501971644004989
+"juliet","juliet_lifetime_char_leak","juliet_case","lifetime/deallocation","tsan",43639466.6666667,644286873.6,1000000,26000000,14.7638576456785,26,-0.565914394888935
+"juliet","juliet_lifetime_char_leak","juliet_case","lifetime/deallocation","memcheck",162205149.866667,967152162.133333,1000000,26000000,5.96252438919687,26,-1.47260259138405
+"juliet","juliet_lifetime_char_leak","juliet_case","lifetime/deallocation","msan",28663808,629332650.666667,1000000,26000000,21.9556539963799,26,-0.1690718464132
+"juliet","juliet_lifetime_char_leak","juliet_case","lifetime/deallocation","baseline",9506542.93333333,209784832,1000000,26000000,22.0674154075946,26,-0.163994433464504
+"juliet","juliet_lifetime_int64_leak","juliet_case","lifetime/deallocation","baseline",9506679.46666667,209517363.2,1000000,26000000,22.0389636502032,26,-0.165284576157948
+"juliet","juliet_lifetime_int64_leak","juliet_case","lifetime/deallocation","tsan",43636872.5333333,643486242.133333,1000000,26000000,14.7463877399048,26,-0.567098384217816
+"juliet","juliet_lifetime_int64_leak","juliet_case","lifetime/deallocation","asan",15378022.4,240278732.8,1000000,26000000,15.6248135520989,26,-0.509236275135884
+"juliet","juliet_lifetime_int64_leak","juliet_case","lifetime/deallocation","msan",28784913.0666667,632734788.266667,1000000,26000000,21.9814729612431,26,-0.167896577585997
+"juliet","juliet_lifetime_int64_leak","juliet_case","lifetime/deallocation","memcheck",162202146.133333,967196808.533333,1000000,26000000,5.96291005754189,26,-1.4725379114184
+"juliet","juliet_lifetime_uaf","juliet_case","lifetime/deallocation","baseline",9506542.93333333,209518045.866667,1000000,26000000,22.0393519848337,26,-0.165266955946065
+"juliet","juliet_lifetime_uaf","juliet_case","lifetime/deallocation","msan",28657800.5333333,628711014.4,1000000,26000000,21.9385648130503,26,-0.16985049948673
+"juliet","juliet_lifetime_uaf","juliet_case","lifetime/deallocation","asan",15489570.1333333,240503466.666667,1000000,26000000,15.5268005888108,26,-0.515528936971485
+"juliet","juliet_lifetime_uaf","juliet_case","lifetime/deallocation","tsan",44299741.8666667,644193621.333333,1000000,26000000,14.541701467973,26,-0.581076052956819
+"juliet","juliet_lifetime_uaf","juliet_case","lifetime/deallocation","memcheck",162191496.533333,967167453.866667,1000000,26000000,5.96312059842111,26,-1.4725026036307
+"juliet","juliet_oob_heap_loop","juliet_case","out-of-bounds access","baseline",9506816,209522278.4,1000000,26000000,22.0391641533822,26,-0.165275478531124
+"juliet","juliet_oob_heap_loop","juliet_case","out-of-bounds access","asan",15628561.0666667,240503876.266667,1000000,26000000,15.3887408598111,26,-0.524460408994623
+"juliet","juliet_oob_heap_loop","juliet_case","out-of-bounds access","msan",28670771.2,628670464,1000000,26000000,21.9272254525194,26,-0.170367501948776
+"juliet","juliet_oob_heap_loop","juliet_case","out-of-bounds access","memcheck",162201053.866667,967174280.533333,1000000,26000000,5.96281132259705,26,-1.47255446973663
+"juliet","juliet_oob_heap_loop","juliet_case","out-of-bounds access","tsan",43629909.3333333,643581405.866667,1000000,26000000,14.7509223764297,26,-0.566790923195587
+"juliet","juliet_oob_heap_memcpy","juliet_case","out-of-bounds access","memcheck",162188356.266667,967174690.133333,1000000,26000000,5.96328067190671,26,-1.47247576007883
+"juliet","juliet_oob_heap_memcpy","juliet_case","out-of-bounds access","asan",15623372.8,240573508.266667,1000000,26000000,15.3983081211931,26,-0.52383889689739
+"juliet","juliet_oob_heap_memcpy","juliet_case","out-of-bounds access","baseline",9506816,209522278.4,1000000,26000000,22.0391641533822,26,-0.165275478531124
+"juliet","juliet_oob_heap_memcpy","juliet_case","out-of-bounds access","tsan",43620488.5333333,643558058.666667,1000000,26000000,14.7535729265132,26,-0.566611252263181
+"juliet","juliet_oob_heap_memcpy","juliet_case","out-of-bounds access","msan",28668586.6666667,628689442.133333,1000000,26000000,21.9295582807477,26,-0.17026111803131
+"juliet","juliet_oob_stack_loop","juliet_case","out-of-bounds access","memcheck",162194773.333333,967180697.6,1000000,26000000,5.96308177953618,26,-1.47250911347914
+"juliet","juliet_oob_stack_loop","juliet_case","out-of-bounds access","baseline",9506679.46666667,209513949.866667,1000000,26000000,22.0386046044033,26,-0.165300867700976
+"juliet","juliet_oob_stack_loop","juliet_case","out-of-bounds access","tsan",43594547.2,643501806.933333,1000000,26000000,14.7610618360393,26,-0.566103781325659
+"juliet","juliet_oob_stack_loop","juliet_case","out-of-bounds access","asan",15490935.4666667,240394240,1000000,26000000,15.518381089204,26,-0.516071339969834
+"juliet","juliet_oob_stack_loop","juliet_case","out-of-bounds access","msan",28547072,628545126.4,1000000,26000000,22.0178492000861,26,-0.16624308633459
+"juliet","juliet_race_byref","juliet_case","data race","tsan",44657459.2,644667118.933333,1000000,26000000,14.4358217077727,26,-0.588383801845562
+"juliet","juliet_race_byref","juliet_case","data race","msan",28934280.5333333,628885094.4,1000000,26000000,21.7349484005832,26,-0.17917504760778
+"juliet","juliet_race_byref","juliet_case","data race","baseline",9659596.8,209676424.533333,1000000,26000000,21.7065400217671,26,-0.180482939390379
+"juliet","juliet_race_byref","juliet_case","data race","memcheck",168877670.4,967192166.4,1000000,26000000,5.72717615128826,26,-1.51287394704397
+"juliet","juliet_race_byref","juliet_case","data race","asan",15418436.2666667,240461414.4,1000000,26000000,15.5957069991499,26,-0.511100854000543
+"juliet","juliet_race_control","juliet_case","data race","msan",28942882.1333333,628947353.6,1000000,26000000,21.7306400483055,26,-0.179373289593938
+"juliet","juliet_race_control","juliet_case","data race","asan",15416797.8666667,240334711.466667,1000000,26000000,15.5891459137766,26,-0.511521640687491
+"juliet","juliet_race_control","juliet_case","data race","tsan",44610218.6666667,644620151.466667,1000000,26000000,14.4500558556628,26,-0.587398258026716
+"juliet","juliet_race_control","juliet_case","data race","memcheck",168884224,967188889.6,1000000,26000000,5.72693450395935,26,-1.51291614103637
+"juliet","juliet_race_control","juliet_case","data race","baseline",9647445.33333333,209670007.466667,1000000,26000000,21.733215397679,26,-0.179254784258869
+"juliet","juliet_race_global","juliet_case","data race","asan",15412019.2,240316962.133333,1000000,26000000,15.592827845253,26,-0.511285482994465
+"juliet","juliet_race_global","juliet_case","data race","msan",28923767.4666667,628931515.733333,1000000,26000000,21.7444534657578,26,-0.178737826076756
+"juliet","juliet_race_global","juliet_case","data race","memcheck",168879035.733333,967195443.2,1000000,26000000,5.72714925212647,26,-1.51287864381324
+"juliet","juliet_race_global","juliet_case","data race","tsan",44475733.3333333,644462728.533333,1000000,26000000,14.4902102839601,26,-0.584623269443601
+"juliet","juliet_race_global","juliet_case","data race","baseline",9650995.2,209674240,1000000,26000000,21.7256599609541,26,-0.179602489381872
+"juliet","juliet_uninit_heap_array","juliet_case","uninitialized memory","baseline",9506679.46666667,209518182.4,1000000,26000000,22.0390498211952,26,-0.165280666227115
+"juliet","juliet_uninit_heap_array","juliet_case","uninitialized memory","msan",30050030.9333333,632007748.266667,1000000,26000000,21.0318501724271,26,-0.212058574410304
+"juliet","juliet_uninit_heap_array","juliet_case","uninitialized memory","memcheck",162205013.333333,967199402.666667,1000000,26000000,5.96282064771364,26,-1.47255290585865
+"juliet","juliet_uninit_heap_array","juliet_case","uninitialized memory","asan",15149602.1333333,240173875.2,1000000,26000000,15.8534774105751,26,-0.49470766677279
+"juliet","juliet_uninit_heap_array","juliet_case","uninitialized memory","tsan",43617211.7333333,643481600,1000000,26000000,14.7529283608066,26,-0.566654942004667
+"juliet","juliet_uninit_partial_int","juliet_case","uninitialized memory","msan",30049075.2,632444654.933333,1000000,26000000,21.0470588769845,26,-0.211335708463293
+"juliet","juliet_uninit_partial_int","juliet_case","uninitialized memory","baseline",9637751.46666667,210046566.4,1000000,26000000,21.7941463967474,26,-0.176455118193424
+"juliet","juliet_uninit_partial_int","juliet_case","uninitialized memory","asan",15165713.0666667,240645597.866667,1000000,26000000,15.8677403963017,26,-0.493808395706047
+"juliet","juliet_uninit_partial_int","juliet_case","uninitialized memory","memcheck",162198596.266667,967201996.8,1000000,26000000,5.96307254848154,26,-1.47251066151455
+"juliet","juliet_uninit_partial_int","juliet_case","uninitialized memory","tsan",43621171.2,645067980.8,1000000,26000000,14.7879564682573,26,-0.564283440672195
+"juliet","juliet_uninit_partial_struct","juliet_case","uninitialized memory","msan",30518613.3333333,642491323.733333,1000000,26000000,21.0524415613466,26,-0.21107999595671
+"juliet","juliet_uninit_partial_struct","juliet_case","uninitialized memory","memcheck",162467703.466667,967180014.933333,1000000,26000000,5.95306017316708,26,-1.47419113586048
+"juliet","juliet_uninit_partial_struct","juliet_case","uninitialized memory","asan",15298969.6,244747605.333333,1000000,26000000,15.9976528963972,26,-0.485654520517487
+"juliet","juliet_uninit_partial_struct","juliet_case","uninitialized memory","baseline",9768686.93333333,213703748.266667,1000000,26000000,21.8764046514228,26,-0.172687895202875
+"juliet","juliet_uninit_partial_struct","juliet_case","uninitialized memory","tsan",44173994.6666667,656064512,1000000,26000000,14.8518266674909,26,-0.559973672425782
