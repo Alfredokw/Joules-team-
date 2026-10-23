@@ -3,6 +3,33 @@
 This is the server replication package for the experiment described in the
 Green Lab report. It is not the macOS calibration package.
 
+## Repository contents and existing results
+
+The completed experiment results and analysis outputs are included
+in this repository:
+
+| Path | Contents |
+|---|---|
+| `Final_results/` | Final experiment used for the primary report analysis, including the execution schedule, raw measurements, run logs, cooldown records, and audit report |
+| `Archived_results/` | First experiment, retained for traceability and comparison between campaigns |
+| `Data Analysis/Data/` | Dataset used by the R analysis scripts |
+| `Data Analysis/R Scripts/` | Data preparation, exploration, and statistical analysis scripts |
+| `Data Analysis/Analyzed Data/` | Processed datasets and statistical outputs |
+| `Data Analysis/Plots/` | Generated analysis figures |
+| `Experimental_setup.drawio` | Editable experiment setup diagram |
+
+The primary analysis uses the final campaign in `Final_results/`.
+The archived campaign is kept separately and is not combined with
+the final campaign for the primary analysis.
+
+Some paths recorded in the final raw CSV retain the original server
+directory name, `Experiment_result_round_cooldowns/`. The corresponding
+files are now stored under `Final_results/`. These recorded paths are
+preserved as part of the original execution records.
+
+`results/` remains the default output directory for a new experiment;
+it is separate from the completed campaign stored in `Final_results/`.
+
 ## Frozen design
 
 * Server: Ubuntu 24.04, two Intel Xeon Silver 4208 packages, approximately
@@ -58,7 +85,11 @@ sanitizer report cannot shorten that workload.
 
 ## Server workflow
 
-Read `docs/SERVER_SETUP.md` first. Then, from the package directory:
+The commands below collect a experiment and write its outputs
+to `results/` by default. They do not process the existing campaign
+in `Final_results/`.
+
+Read `docs/SERVER_SETUP.md` first. Then, from the repository root:
 
 ```sh
 make static-check
